@@ -1,41 +1,54 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: "Services", href: "#services" },
-    { name: "Products", href: "#products" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" }
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" }
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return location.pathname === "/";
+    }
+    return location.pathname.startsWith(href);
+  };
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              SignCraft Pro
+              ProSign Manufacturing
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors"
+                to={item.href}
+                className={`transition-colors ${
+                  isActive(item.href) 
+                    ? "text-primary font-medium" 
+                    : "text-foreground hover:text-primary"
+                }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <Button variant="cta" size="sm">
-              Get Quote
+            <Button variant="cta" size="sm" asChild>
+              <Link to="/contact">Get Quote</Link>
             </Button>
           </nav>
 
@@ -53,17 +66,21 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors"
+                  to={item.href}
+                  className={`transition-colors ${
+                    isActive(item.href) 
+                      ? "text-primary font-medium" 
+                      : "text-foreground hover:text-primary"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <Button variant="cta" size="sm" className="self-start">
-                Get Quote
+              <Button variant="cta" size="sm" className="self-start" asChild>
+                <Link to="/contact">Get Quote</Link>
               </Button>
             </nav>
           </div>

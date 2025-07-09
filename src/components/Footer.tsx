@@ -1,86 +1,113 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const footerSections = [
-    {
-      title: "Services",
-      links: ["LED Channel Letters", "Digital Printing", "Vinyl Graphics", "Pylon Signs", "Monument Signs", "Wayfinding"]
-    },
-    {
-      title: "Industries",
-      links: ["Retail", "Healthcare", "Education", "Hospitality", "Real Estate", "Government"]
-    },
-    {
-      title: "Support",
-      links: ["Installation", "Maintenance", "Warranty", "Technical Support", "Design Services", "Permits"]
-    }
+  const productLinks = [
+    { name: "Trimless Channel Letters", href: "/products/trimless-channel-letters" },
+    { name: "Cast Block Acrylic Letters", href: "/products/cast-acrylic-letters" },
+    { name: "Flat Cut Metal Letters", href: "/products/flat-cut-letters" },
+    { name: "Backlit Channel Letters", href: "/products/backlit-letters" },
+    { name: "Custom Metal Fabrication", href: "/products/metal-fabrication" }
+  ];
+
+  const companyLinks = [
+    { name: "About Us", href: "/about" },
+    { name: "Manufacturing Process", href: "/about#process" },
+    { name: "Quality Standards", href: "/about#quality" },
+    { name: "Wholesale Partner Program", href: "/about#partnership" }
   ];
 
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="text-3xl font-bold mb-4">
-              SignCraft Pro
+          <div className="lg:col-span-1">
+            <div className="text-2xl font-bold mb-4">
+              ProSign Manufacturing
             </div>
-            <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Leading wholesale sign manufacturer with over 25 years of experience 
-              creating quality signage solutions for businesses nationwide.
+            <p className="text-primary-foreground/80 mb-6">
+              Wholesale manufacturer of premium channel letters and acrylic signage for sign companies across USA and Canada.
             </p>
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-accent" />
-                <span className="text-primary-foreground/80">1-800-SIGNPRO</span>
+                <Phone className="w-4 h-4 text-accent" />
+                <span className="text-primary-foreground/80 text-sm">1-800-PRO-SIGN</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-accent" />
-                <span className="text-primary-foreground/80">quotes@signcraft-pro.com</span>
+                <Mail className="w-4 h-4 text-accent" />
+                <span className="text-primary-foreground/80 text-sm">orders@prosignmfg.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-accent" />
-                <span className="text-primary-foreground/80">1234 Industrial Way, Manufacturing City, ST 12345</span>
+                <MapPin className="w-4 h-4 text-accent" />
+                <span className="text-primary-foreground/80 text-sm">Industrial Park, Manufacturing City</span>
               </div>
             </div>
           </div>
 
-          {/* Footer Links */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h4 className="font-semibold text-lg mb-4">{section.title}</h4>
-              <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a 
-                      href="#" 
-                      className="text-primary-foreground/80 hover:text-accent transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Products */}
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Products</h4>
+            <ul className="space-y-2">
+              {productLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.href} 
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Company</h4>
+            <ul className="space-y-2">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.href} 
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Service Areas</h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/80">
+              <li>• United States (All 50 States)</li>
+              <li>• Canada (All Provinces)</li>
+              <li>• Express Shipping Available</li>
+              <li>• White Glove Delivery</li>
+              <li>• Freight LTL Options</li>
+            </ul>
+          </div>
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-              © 2024 SignCraft Pro. All rights reserved.
+              © 2024 ProSign Manufacturing. All rights reserved. Wholesale supplier to the sign industry.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <Link to="/privacy" className="text-primary-foreground/60 hover:text-accent transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              </Link>
+              <Link to="/terms" className="text-primary-foreground/60 hover:text-accent transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
-                Quality Guarantee
-              </a>
+              </Link>
+              <Link to="/warranty" className="text-primary-foreground/60 hover:text-accent transition-colors">
+                Product Warranty
+              </Link>
             </div>
           </div>
         </div>
