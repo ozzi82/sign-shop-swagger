@@ -25,7 +25,7 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl">
             Premier wholesale manufacturer of trimless channel letters and cast block acrylic letters. 
-            Serving sign companies across USA and Canada with 24-hour quote turnaround and 21-day delivery.
+            Serving sign companies across USA and Canada with 24-48 hour quote turnaround and 21-day delivery from approval.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -54,8 +54,8 @@ const Hero = () => {
             <div className="flex items-center text-primary-foreground">
               <Truck className="w-8 h-8 mr-3 text-accent" />
               <div>
-                <div className="text-xl font-bold">24h</div>
-                <div className="text-sm opacity-90">Quote Turnaround</div>
+                <div className="text-xl font-bold">24-48h</div>
+                <div className="text-sm opacity-90">Quote Response</div>
               </div>
             </div>
             <div className="flex items-center text-primary-foreground">

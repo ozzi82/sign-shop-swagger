@@ -9,14 +9,14 @@ const WholesaleFeatures = () => {
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Trimless Channel Letters",
-      description: "Premium flush-face design with no visible trim lines. Superior to traditional methods with clean aesthetics.",
+      description: "True trimless flush-face design with no visible trim lines - superior to traditional channel letters and competitive with Kalisign quality.",
       benefits: ["No visible seams", "Weather sealed", "UL listed LEDs", "Custom fonts"],
       badge: "Most Popular"
     },
     {
       icon: <Layers className="w-8 h-8" />,
       title: "Cast Block Acrylic Letters",
-      description: "Thick, premium cast acrylic letters with precision CNC cutting and superior edge quality.",
+      description: "Premium thick-cast acrylic letters with precision CNC cutting - comparable quality to Bitro Resno with faster delivery.",
       benefits: ["1/2\" to 2\" thickness", "Polished edges", "Custom colors", "Weather resistant"],
       badge: "Premium Quality"
     },
@@ -94,7 +94,7 @@ const WholesaleFeatures = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24h</div>
+              <div className="text-4xl font-bold text-primary mb-2">24-48h</div>
               <div className="text-lg font-semibold text-foreground mb-2">Quote Response</div>
               <div className="text-muted-foreground">Fast quote turnaround for all inquiries</div>
             </div>

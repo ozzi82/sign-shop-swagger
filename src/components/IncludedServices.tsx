@@ -1,6 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileImage, Palette, Zap, Package, Shield, Eye } from "lucide-react";
 import designRenderingImage from "@/assets/3d-design-rendering.jpg";
+import touchUpPaintImage from "@/assets/touch-up-paint.jpg";
+import installationPatternImage from "@/assets/installation-pattern.jpg";
+import powerSuppliesImage from "@/assets/power-supplies.jpg";
+import warrantyImage from "@/assets/warranty.jpg";
 
 const IncludedServices = () => {
   const services = [
@@ -19,22 +23,26 @@ const IncludedServices = () => {
     {
       icon: <Palette className="w-8 h-8" />,
       title: "Touch-Up Paint Included",
-      description: "Matching touch-up paint provided with every painted product order."
+      description: "Matching touch-up paint provided with every painted product order.",
+      image: touchUpPaintImage
     },
     {
       icon: <Package className="w-8 h-8" />,
       title: "1:1 Installation Patterns",
-      description: "Full-size paper patterns for precise field installation positioning."
+      description: "Full-size paper patterns for precise field installation positioning.",
+      image: installationPatternImage
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Power Supplies Included",
-      description: "All necessary transformers and power supplies included with LED products."
+      description: "All necessary transformers and power supplies included with LED products.",
+      image: powerSuppliesImage
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "3-Year Warranty",
-      description: "Comprehensive 3-year warranty coverage on all manufactured products."
+      description: "Comprehensive 3-year warranty coverage on all manufactured products.",
+      image: warrantyImage
     }
   ];
 
@@ -88,25 +96,25 @@ const IncludedServices = () => {
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg mx-auto mb-4">1</div>
               <h4 className="font-semibold text-foreground mb-2">Quote Request</h4>
               <p className="text-sm text-muted-foreground">Submit specs or drawings for pricing</p>
-              <div className="text-xs text-primary font-medium mt-1">Within 24 hours</div>
+              <div className="text-xs text-primary font-medium mt-1">24-48 hour response</div>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg mx-auto mb-4">2</div>
-              <h4 className="font-semibold text-foreground mb-2">Art Approval</h4>
-              <p className="text-sm text-muted-foreground">Review 3D renderings and production drawings</p>
-              <div className="text-xs text-primary font-medium mt-1">Customer approval</div>
+              <h4 className="font-semibold text-foreground mb-2">Production Drawings</h4>
+              <p className="text-sm text-muted-foreground">Receive detailed drawings and 3D renderings</p>
+              <div className="text-xs text-primary font-medium mt-1">24-48 hours after order</div>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg mx-auto mb-4">3</div>
-              <h4 className="font-semibold text-foreground mb-2">Production</h4>
-              <p className="text-sm text-muted-foreground">Manufacturing with quality control</p>
-              <div className="text-xs text-primary font-medium mt-1">18-19 days typical</div>
+              <h4 className="font-semibold text-foreground mb-2">Art Approval</h4>
+              <p className="text-sm text-muted-foreground">Customer reviews and approves all drawings</p>
+              <div className="text-xs text-primary font-medium mt-1">Customer timeline</div>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg mx-auto mb-4">4</div>
-              <h4 className="font-semibold text-foreground mb-2">Delivery</h4>
-              <p className="text-sm text-muted-foreground">Packaged and shipped nationwide</p>
-              <div className="text-xs text-primary font-medium mt-1">21 days total</div>
+              <h4 className="font-semibold text-foreground mb-2">Production & Delivery</h4>
+              <p className="text-sm text-muted-foreground">Manufacturing and nationwide shipping</p>
+              <div className="text-xs text-primary font-medium mt-1">21 days from approval</div>
             </div>
           </div>
         </div>
