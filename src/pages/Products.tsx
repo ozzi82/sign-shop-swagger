@@ -5,25 +5,23 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { CheckCircle, Zap, Layers, Scissors, Wrench, Star, Clock, Shield } from "lucide-react";
-import ledSignsImage from "@/assets/led-signs.jpg";
-import vinylBannersImage from "@/assets/vinyl-banners.jpg";
+import trimlessLettersImage from "@/assets/trimless-channel-letters.jpg";
+import castAcrylicImage from "@/assets/cast-acrylic-manufacturing.jpg";
 
 const Products = () => {
   const products = [
     {
       id: "trimless-channel-letters",
-      image: ledSignsImage,
+      image: trimlessLettersImage,
       title: "Trimless Channel Letters",
       description: "Premium flush-face channel letters with no visible trim lines",
-      startingPrice: "$28.50",
-      priceUnit: "per linear inch",
       features: [
         "True trimless design - no visible seams",
         "UL listed LED modules",
-        "5-year warranty on LEDs",
+        "3-year comprehensive warranty",
         "Weather sealed construction",
         "Custom fonts and sizes",
-        "5-7 day production"
+        "21-day delivery from approval"
       ],
       badges: ["Best Seller", "Premium"],
       specifications: {
@@ -36,18 +34,16 @@ const Products = () => {
     },
     {
       id: "cast-acrylic-letters",
-      image: vinylBannersImage,
+      image: castAcrylicImage,
       title: "Cast Block Acrylic Letters",
       description: "Thick cast acrylic letters with precision CNC cutting",
-      startingPrice: "$3.25",
-      priceUnit: "per square inch",
       features: [
         "1/2\" to 2\" thickness available",
         "Polished edges standard",
         "Custom colors and finishes",
         "UV resistant materials",
         "Precision CNC cutting",
-        "3-5 day production"
+        "21-day delivery from approval"
       ],
       badges: ["Fast Ship"],
       specifications: {
@@ -62,8 +58,6 @@ const Products = () => {
       id: "flat-cut-letters",
       title: "Flat Cut Metal Letters",
       description: "Laser cut aluminum and stainless steel letters",
-      startingPrice: "$2.85",
-      priceUnit: "per square inch",
       features: [
         "Laser precision cutting",
         "Multiple metal options",
@@ -85,8 +79,6 @@ const Products = () => {
       id: "backlit-letters",
       title: "Backlit/Halo Channel Letters",
       description: "Reverse illuminated channel letters for elegant lighting",
-      startingPrice: "$32.00",
-      priceUnit: "per linear inch",
       features: [
         "Even backlit illumination",
         "Multiple halo effects",
@@ -168,10 +160,6 @@ const Products = () => {
                       <CardTitle className="text-2xl font-semibold text-foreground">
                         {product.title}
                       </CardTitle>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-accent">{product.startingPrice}</div>
-                      <div className="text-sm text-muted-foreground">{product.priceUnit}</div>
                     </div>
                   </div>
                   <CardDescription className="text-muted-foreground text-base">

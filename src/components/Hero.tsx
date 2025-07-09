@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Factory, Truck, Award, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-manufacturing.jpg";
+import heroImage from "@/assets/manufacturing-facility.jpg";
 
 const Hero = () => {
   return (
@@ -24,8 +24,8 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl">
-            Premier wholesale manufacturer of trimless channel letters, cast block acrylic letters, 
-            and custom metal signage. Serving sign companies across USA and Canada since 1999.
+            Premier wholesale manufacturer of trimless channel letters and cast block acrylic letters. 
+            Serving sign companies across USA and Canada with 24-hour quote turnaround and 21-day delivery.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -54,8 +54,8 @@ const Hero = () => {
             <div className="flex items-center text-primary-foreground">
               <Truck className="w-8 h-8 mr-3 text-accent" />
               <div>
-                <div className="text-xl font-bold">5-7</div>
-                <div className="text-sm opacity-90">Day Turnaround</div>
+                <div className="text-xl font-bold">24h</div>
+                <div className="text-sm opacity-90">Quote Turnaround</div>
               </div>
             </div>
             <div className="flex items-center text-primary-foreground">

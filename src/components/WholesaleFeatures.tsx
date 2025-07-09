@@ -44,8 +44,8 @@ const WholesaleFeatures = () => {
             Wholesale Manufacturing Capabilities
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            Advanced manufacturing technologies and processes delivering superior quality signage products 
-            to sign companies across North America. Fast turnaround, competitive wholesale pricing.
+            Advanced manufacturing technologies delivering superior quality trimless channel letters and cast block acrylic letters 
+            to sign companies across North America. 24-hour quotes, 21-day delivery from art approval, 3-year warranty.
           </p>
         </div>
 
@@ -94,19 +94,19 @@ const WholesaleFeatures = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">5-7</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Business Days</div>
-              <div className="text-muted-foreground">Average production time for standard orders</div>
+              <div className="text-4xl font-bold text-primary mb-2">24h</div>
+              <div className="text-lg font-semibold text-foreground mb-2">Quote Response</div>
+              <div className="text-muted-foreground">Fast quote turnaround for all inquiries</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Quality Guarantee</div>
-              <div className="text-muted-foreground">Every product backed by our quality promise</div>
+              <div className="text-4xl font-bold text-primary mb-2">3</div>
+              <div className="text-lg font-semibold text-foreground mb-2">Year Warranty</div>
+              <div className="text-muted-foreground">Comprehensive warranty on all products</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Order Support</div>
-              <div className="text-muted-foreground">Online ordering system with real-time updates</div>
+              <div className="text-4xl font-bold text-primary mb-2">21</div>
+              <div className="text-lg font-semibold text-foreground mb-2">Day Delivery</div>
+              <div className="text-muted-foreground">From art approval to your door</div>
             </div>
           </div>
         </div>
