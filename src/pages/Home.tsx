@@ -7,6 +7,7 @@ import FAQSchema from "@/components/FAQSchema";
 import Footer from "@/components/Footer";
 
 const Home = () => {
+  console.log("Home component rendering");
   return (
     <div className="min-h-screen">
       <Header />

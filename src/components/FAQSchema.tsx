@@ -3,6 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { CheckCircle, Download, FileText, Zap } from "lucide-react";
 
 const FAQSchema = () => {
+  console.log("FAQSchema component rendering");
   const faqs = [
     {
       question: "What are trimless channel letters?",
