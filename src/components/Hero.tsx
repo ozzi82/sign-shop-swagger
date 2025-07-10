@@ -3,6 +3,16 @@ import { ArrowRight, Factory, Truck, Award, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+// TinaCMS imports - will be available after running: npx tinacms build
+let useTina: any, client: any;
+try {
+  ({ useTina } = require("tinacms/dist/react"));
+  ({ client } = require("../../tina/__generated__/client"));
+} catch (error) {
+  // TinaCMS not yet initialized
+  useTina = () => ({ data: null });
+  client = null;
+}
 
 interface HeroContent {
   title: string;
@@ -23,10 +33,57 @@ interface HeroContent {
   };
 }
 
-const Hero = () => {
+interface TinaHeroContent {
+  title: string;
+  subtitle: string;
+  tagline: string;
+  description: string;
+  image_url: string;
+  button_text: string;
+  button_url: string;
+  secondary_button_text: string;
+  secondary_button_url: string;
+  stats: Array<{
+    icon: string;
+    value: string;
+    label: string;
+  }>;
+}
+
+interface HeroProps {
+  data?: any;
+  query?: any;
+  variables?: any;
+}
+
+const Hero = ({ data, query, variables }: HeroProps = {}) => {
   const [content, setContent] = useState<HeroContent | null>(null);
+  
+  // Use Tina if data is available, otherwise fallback to Supabase
+  const tinaProps = data ? { data, query, variables } : null;
+  const { data: tinaData } = tinaProps ? useTina(tinaProps) : { data: null };
 
   useEffect(() => {
+    if (tinaData) {
+      // Convert Tina data to our format
+      const tinaContent = tinaData.heroContent as TinaHeroContent;
+      setContent({
+        title: tinaContent.title,
+        subtitle: tinaContent.subtitle,
+        description: tinaContent.description,
+        image_url: tinaContent.image_url,
+        button_text: tinaContent.button_text,
+        button_url: tinaContent.button_url,
+        additional_data: {
+          tagline: tinaContent.tagline,
+          secondaryButtonText: tinaContent.secondary_button_text,
+          secondaryButtonUrl: tinaContent.secondary_button_url,
+          stats: tinaContent.stats,
+        },
+      });
+      return;
+    }
+
     const fetchHeroContent = async () => {
       try {
         const { data, error } = await supabase
@@ -80,7 +137,7 @@ const Hero = () => {
     };
 
     fetchHeroContent();
-  }, []);
+  }, [tinaData]);
 
   const getIcon = (iconName: string) => {
     const icons = { Factory, Truck, Award, Zap };
