@@ -1,10 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileImage, Palette, Zap, Package, Shield, Eye } from "lucide-react";
-import designRenderingImage from "@/assets/3d-design-rendering.jpg";
-import touchUpPaintImage from "@/assets/touch-up-paint.jpg";
-import installationPatternImage from "@/assets/installation-pattern.jpg";
-import powerSuppliesImage from "@/assets/power-supplies.jpg";
-import warrantyImage from "@/assets/warranty.jpg";
+const designRenderingImage = "/src/assets/3d-design-rendering.jpg";
+const touchUpPaintImage = "/src/assets/touch-up-paint.jpg";
+const installationPatternImage = "/src/assets/installation-pattern.jpg";
+const powerSuppliesImage = "/src/assets/power-supplies.jpg";
+const warrantyImage = "/src/assets/warranty.jpg";
 const IncludedServices = () => {
   const services = [{
     icon: <FileImage className="w-8 h-8" />,

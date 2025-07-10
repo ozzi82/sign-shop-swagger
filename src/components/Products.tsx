@@ -1,8 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import ledSignsImage from "@/assets/led-signs.jpg";
-import vinylBannersImage from "@/assets/vinyl-banners.jpg";
-import pylonSignsImage from "@/assets/pylon-signs.jpg";
+const ledSignsImage = "/src/assets/led-signs.jpg";
+const vinylBannersImage = "/src/assets/vinyl-banners.jpg";
+const pylonSignsImage = "/src/assets/pylon-signs.jpg";
 
 const Products = () => {
   const products = [
