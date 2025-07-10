@@ -77,9 +77,9 @@ const WholesaleFeatures = () => {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="w-full" asChild>
-                  <Link to="/products">
-                    View Details & Pricing
+                <Button variant="outline" className="w-full apple-glow" asChild>
+                  <Link to="/contact">
+                    Get Quote
                   </Link>
                 </Button>
               </CardContent>

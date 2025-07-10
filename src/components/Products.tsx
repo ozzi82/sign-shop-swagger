@@ -1,28 +1,35 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import ledSignsImage from "@/assets/led-signs.jpg";
-import vinylBannersImage from "@/assets/vinyl-banners.jpg";
-import pylonSignsImage from "@/assets/pylon-signs.jpg";
+import trimlessChannelImage from "@/assets/trimless-channel-letters.jpg";
+import haloLitImage from "@/assets/halo-lit-letters.jpg";
+import castBlockImage from "@/assets/cast-block-acrylic.jpg";
+import pylonSignImage from "@/assets/pylon-sign.jpg";
 
 const Products = () => {
   const products = [
     {
-      image: ledSignsImage,
-      title: "LED Channel Letters",
-      description: "Custom illuminated signage for storefronts and buildings",
-      features: ["Custom fonts", "LED illumination", "Weather resistant", "UL listed"]
+      image: trimlessChannelImage,
+      title: "Trimless Channel Letters",
+      description: "Professional flush-mounted channel letters with no visible trim lines or seams",
+      features: ["No visible trim lines", "UL listed LED modules", "Weather sealed", "Custom fonts available"]
     },
     {
-      image: vinylBannersImage,
-      title: "Digital Graphics",
-      description: "Large format prints and vinyl graphics for any application",
-      features: ["UV resistant", "Custom sizes", "Multiple substrates", "Laminated options"]
+      image: haloLitImage,
+      title: "Halo-Lit Channel Letters", 
+      description: "Premium backlit channel letters creating beautiful halo illumination effects",
+      features: ["Even halo glow", "Multiple standoff heights", "Architectural grade", "Warm LED lighting"]
     },
     {
-      image: pylonSignsImage,
+      image: castBlockImage,
+      title: "Cast Block Acrylic Letters",
+      description: "Thick dimensional acrylic letters precision-cut for professional signage",
+      features: ["Precision cutting", "Multiple thicknesses", "Various acrylics", "Custom dimensions"]
+    },
+    {
+      image: pylonSignImage,
       title: "Pylon Signs",
-      description: "High-visibility roadside signs for maximum impact",
-      features: ["LED lighting", "Custom height", "Multi-tenant options", "Permit ready"]
+      description: "Large roadside signs for maximum visibility and business identification", 
+      features: ["LED illumination", "Custom heights", "Multi-tenant options", "Permit assistance"]
     }
   ];
 

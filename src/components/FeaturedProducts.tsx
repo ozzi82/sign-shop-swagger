@@ -114,7 +114,7 @@ const FeaturedProducts = () => {
                     </Link>
                   </Button>
                   <Button variant="premium" className="flex-1" asChild>
-                    <Link to="/products">View Details</Link>
+                    <Link to="/products">Learn More</Link>
                   </Button>
                 </div>
               </CardContent>
