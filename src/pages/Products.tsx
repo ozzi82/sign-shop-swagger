@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { CheckCircle, Zap, Layers, Scissors, Wrench, Star, Clock, Shield } from "lucide-react";
-const trimlessLettersImage = "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
-const haloLettersImage = "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
+import trimlessLettersImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
+import haloLettersImage from "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
 
 const Products = () => {
   const products = [

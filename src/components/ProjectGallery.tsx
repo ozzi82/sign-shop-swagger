@@ -71,7 +71,7 @@ const ProjectGallery = () => {
     name: "Restaurant",
     count: projects.filter(p => p.category === "restaurant").length
   }];
-  return <section id="projects" className="py-20 bg-slate-950">
+  return <section className="py-20 bg-slate-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">

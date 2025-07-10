@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Clock } from "lucide-react";
-const plazaLettersImage = "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
-const haloLettersImage = "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
+import plazaLettersImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
+import haloLettersImage from "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
 const FeaturedProducts = () => {
   const featuredProducts = [{
     id: "trimless-channel-letters",
@@ -106,12 +106,8 @@ const FeaturedProducts = () => {
               <div className="text-muted-foreground">Fast quotes on all products</div>
             </div>
             <div className="text-center group">
-              <div className="bg-gradient-accent p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-accent group-hover:scale-110 transition-transform duration-300 bg-primary rounded-full">
-                <img 
-                  src="/lovable-uploads/f04a9b84-edea-4845-8540-e15766cfb5d6.png" 
-                  alt="ProSign Manufacturing Logo" 
-                  className="w-10 h-10 object-contain"
-                />
+              <div className="bg-gradient-accent p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-accent group-hover:scale-110 transition-transform duration-300">
+                <CheckCircle className="w-10 h-10 text-accent-foreground" />
               </div>
               <div className="text-3xl font-bold gradient-text mb-3">21 Days</div>
               <div className="text-xl font-semibold text-foreground mb-3">Total Delivery</div>
