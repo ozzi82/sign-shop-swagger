@@ -12,60 +12,64 @@ const edgeluxeLettersImage = "/lovable-uploads/6923d1c5-a3c7-48d5-8e69-63fdc5586
 
 const Products = () => {
   const products = [{
-    id: "trimless-channel-letters",
+    id: "edgeluxe-lp5",
     image: trimlessLettersImage,
-    title: "Trimless Channel Letters",
-    description: "Premium flush-face channel letters with no visible trim lines",
-    features: ["True trimless design - no visible seams", "UL listed LED modules", "3-year comprehensive warranty", "Weather sealed construction", "Custom fonts and sizes", "21-day delivery from approval"],
+    title: "Edgeluxe LP 5",
+    description: "Trimless Fabricated Stainless Steel Letters with face-lit illumination",
+    features: ["Thick gauge stainless steel returns and back welded together", "Step-router acrylic face, trim-less", "Face-lit illumination", "Painted in any PMS color", "Minimum 15mm stroke width for stability", "Serviceable LEDs"],
     badges: ["Best Seller", "Premium"],
     specifications: {
-      "Depths Available": "4\", 5\", 6\", 8\"",
-      "Face Materials": "White, Colored Acrylic",
-      "Return Materials": "Painted Aluminum",
-      "Mounting": "Studs, Raceway, Direct",
-      "LED Options": "3000K, 4000K, 6500K"
+      "Materials": "Thick gauge stainless steel",
+      "Illumination": "Face-lit",
+      "Depths": "30mm (1.2\"), 50mm (2\"), 80mm (3.1\"), 100mm (3.9\")",
+      "Customization": "Any PMS color, vinyls or pigmented translucent acrylics",
+      "Stroke Width": "Minimum 15mm (0.6\")",
+      "Minimum Height": "50mm (2\")"
     }
   }, {
-    id: "halo-lit-letters",
+    id: "edgeluxe-lp31-32",
     image: haloLettersImage,
-    title: "Halo-Lit Channel Letters",
-    description: "Sophisticated backlit illumination for premium architectural signage",
-    features: ["Even halo backlighting effect", "Multiple standoff heights available", "Premium brushed or painted faces", "Warm LED backlighting", "Architectural quality finish", "21-day delivery from approval"],
-    badges: ["Fast Ship"],
+    title: "Edgeluxe LP 3.1/3.2",
+    description: "Fabricated Stainless Steel with standoffs for halo-lit effects",
+    features: ["Halo illuminated from the back with standoff spacers", "LEDs arranged to avoid reflection of diodes on mounting surface", "Painted in any PMS color", "Multiple depth options", "Serviceable LEDs", "IP67 waterproofing"],
+    badges: ["Premium"],
     specifications: {
-      "Standoff Heights": "1\", 1.5\", 2\", 3\"",
-      "Face Materials": "Brushed Aluminum, Painted Metal",
-      "LED Options": "Warm White, Cool White",
-      "Mounting": "Threaded Rod, Tube System",
-      "Maximum Size": "48\" x 96\" per letter"
+      "Materials": "Fabricated Stainless Steel",
+      "Illumination": "Halo from back with standoffs (LP 3.1) / Flush-mount halo (LP 3.2)",
+      "Depths": "30mm (1.2\"), 50mm (2\"), 80mm (3.1\"), 100mm (3.9\")",
+      "Customization": "Any PMS color, vinyls or pigmented translucent acrylics",
+      "Stroke Width": "Minimum 15mm (0.6\")",
+      "Minimum Height": "50mm (2\")"
     }
   }, {
-    id: "flat-cut-letters",
+    id: "edgeluxe-lp1",
     image: flatCutLettersImage,
-    title: "Flat Cut Metal Letters",
-    description: "Laser cut aluminum and stainless steel letters",
-    features: ["Laser precision cutting", "Multiple metal options", "Powder coat finishes", "Brushed stainless available", "Custom thicknesses", "2-3 day production"],
+    title: "Edgeluxe LP 1",
+    description: "Flat Cutout Letters (FCO) in wood, aluminum, stainless steel, and acrylic",
+    features: ["Multiple material options available", "Thickness range from 1mm to 200mm", "Broad range of acrylic colors, paint, and vinyl", "Minimum 5mm stroke width", "No maintenance required", "Custom thickness available"],
     badges: ["Quick Ship"],
     specifications: {
-      "Materials": "Aluminum, Stainless Steel",
-      "Thickness": "1/8\", 1/4\", 3/8\", 1/2\"",
-      "Finishes": "Powder Coat, Brushed, Polished",
-      "Maximum Size": "48\" x 96\"",
-      "Mounting": "Studs, Standoffs, Direct"
+      "Materials": "Wood, aluminum, stainless steel, acrylic",
+      "Thickness": "1mm (0.039\") to 200mm (7.87\")",
+      "Customization": "Broad range of acrylic colors, paint, and vinyl",
+      "Stroke Width": "Minimum 5mm (0.2\")",
+      "Minimum Height": "10mm (0.4\")",
+      "Maintenance": "No maintenance"
     }
   }, {
     id: "edgeluxe-lp11",
     image: edgeluxeLettersImage,
-    title: "Edgeluxe LP11",
-    description: "Reverse illuminated channel letters for elegant lighting",
-    features: ["Even backlit illumination", "Multiple halo effects", "Energy efficient LEDs", "Custom letter spacing", "Premium construction", "7-10 day production"],
+    title: "Edgeluxe LP 11",
+    description: "Block Acrylic letters with various illumination options",
+    features: ["30mm cast block acrylic construction", "Multiple illumination options available", "Embedded LEDs for uniform lighting", "IP67 waterproofing and heat dissipation", "Painted in any PMS color", "No maintenance required"],
     badges: ["Premium"],
     specifications: {
-      "Standoff Heights": "1\", 1.5\", 2\", 3\"",
-      "Face Materials": "Brushed, Painted Metal",
-      "LED Options": "Warm, Cool, RGB",
-      "Control": "Dimming Available",
-      "Mounting": "Threaded Rod, Tube"
+      "Materials": "30mm (1.2\") cast block acrylic",
+      "Illumination": "Face-lit, Back-lit, Side-lit, Halo-lit, Neon effect",
+      "Depth": "Standard 30mm (1.2\")",
+      "Customization": "Any PMS color, vinyls or pigmented translucent acrylics",
+      "Stroke Width": "Minimum 12mm (0.47\")",
+      "Minimum Height": "50mm (2\")"
     }
   }];
   return <div className="min-h-screen">
