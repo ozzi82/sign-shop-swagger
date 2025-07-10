@@ -118,7 +118,7 @@ const Hero = ({ data, query, variables }: HeroProps = {}) => {
         title: "Wholesale Trimless Channel Letters &",
         subtitle: "Cast Block Acrylic",
         description:
-          "UL-listed trimless channel letters and precision-cut cast block acrylic letters. German engineering delivered in 3 weeks - serving sign companies across USA and Canada.",
+          "UL-listed trimless channel letters and precision-cut cast block acrylic letters. German engineering precision meets Florida speed - serving sign companies across USA and Canada.",
         image_url: "/lovable-uploads/b65672d5-65aa-4d28-b91a-f20d6649be08.png",
         button_text: "Request Wholesale Quote",
         button_url: "/contact",
