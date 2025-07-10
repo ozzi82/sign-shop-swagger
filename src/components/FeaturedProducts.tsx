@@ -98,7 +98,7 @@ const FeaturedProducts = () => {
         <div className="glass rounded-2xl p-10 border-border/50">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center group">
-              <div className="bg-gradient-primary p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-primary p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300 bg-slate-50">
                 <Clock className="w-10 h-10 text-primary-foreground" />
               </div>
               <div className="text-3xl font-bold gradient-text mb-3">24-48h</div>
@@ -106,7 +106,7 @@ const FeaturedProducts = () => {
               <div className="text-muted-foreground">Fast quotes on all products</div>
             </div>
             <div className="text-center group">
-              <div className="bg-gradient-accent p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-accent group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-accent p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-accent group-hover:scale-110 transition-transform duration-300 bg-slate-100">
                 <CheckCircle className="w-10 h-10 text-accent-foreground" />
               </div>
               <div className="text-3xl font-bold gradient-text mb-3">21 Days</div>
