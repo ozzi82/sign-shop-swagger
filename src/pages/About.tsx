@@ -2,52 +2,58 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Users, Shield, Clock, Award, Factory, Truck } from "lucide-react";
-
 const About = () => {
-  const milestones = [
-    { year: "1999", event: "Company Founded", description: "Started as a small fabrication shop" },
-    { year: "2005", event: "First Major Expansion", description: "Added automated cutting equipment" },
-    { year: "2010", event: "LED Technology Leader", description: "Early adopter of LED lighting systems" },
-    { year: "2015", event: "Trimless Innovation", description: "Developed proprietary trimless channel letter process" },
-    { year: "2020", event: "National Distribution", description: "Serving all 50 states and Canada" },
-    { year: "2024", event: "25 Years Strong", description: "Industry leader in wholesale manufacturing" }
-  ];
-
-  const capabilities = [
-    {
-      icon: <Factory className="w-8 h-8" />,
-      title: "50,000 sq ft Manufacturing",
-      description: "State-of-the-art facility with advanced CNC equipment, laser cutting, and automated LED assembly lines."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Expert Team",
-      description: "Skilled craftspeople, engineers, and quality control specialists with decades of combined experience."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Quality Standards",
-      description: "ISO 9001 certified quality management system ensuring consistent, reliable manufacturing processes."
-    },
-    {
-      icon: <Truck className="w-8 h-8" />,
-      title: "Nationwide Shipping",
-      description: "Fast, secure shipping to all 50 states and Canada with tracking and white-glove delivery options."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const milestones = [{
+    year: "1999",
+    event: "Company Founded",
+    description: "Started as a small fabrication shop"
+  }, {
+    year: "2005",
+    event: "First Major Expansion",
+    description: "Added automated cutting equipment"
+  }, {
+    year: "2010",
+    event: "LED Technology Leader",
+    description: "Early adopter of LED lighting systems"
+  }, {
+    year: "2015",
+    event: "Trimless Innovation",
+    description: "Developed proprietary trimless channel letter process"
+  }, {
+    year: "2020",
+    event: "National Distribution",
+    description: "Serving all 50 states and Canada"
+  }, {
+    year: "2024",
+    event: "25 Years Strong",
+    description: "Industry leader in wholesale manufacturing"
+  }];
+  const capabilities = [{
+    icon: <Factory className="w-8 h-8" />,
+    title: "50,000 sq ft Manufacturing",
+    description: "State-of-the-art facility with advanced CNC equipment, laser cutting, and automated LED assembly lines."
+  }, {
+    icon: <Users className="w-8 h-8" />,
+    title: "Expert Team",
+    description: "Skilled craftspeople, engineers, and quality control specialists with decades of combined experience."
+  }, {
+    icon: <Shield className="w-8 h-8" />,
+    title: "Quality Standards",
+    description: "ISO 9001 certified quality management system ensuring consistent, reliable manufacturing processes."
+  }, {
+    icon: <Truck className="w-8 h-8" />,
+    title: "Nationwide Shipping",
+    description: "Fast, secure shipping to all 50 states and Canada with tracking and white-glove delivery options."
+  }];
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About ProSign Manufacturing
-            </h1>
-            <p className="text-xl mb-8 opacity-90">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-slate-200">About Sunlite Signs Manufacturing</h1>
+            <p className="text-xl mb-8 opacity-90 text-slate-400">
               25 years of innovation in wholesale signage manufacturing. Trusted by sign companies 
               across North America for quality, reliability, and exceptional service.
             </p>
@@ -90,8 +96,7 @@ const About = () => {
 
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-foreground mb-6">Company Timeline</h3>
-              {milestones.map((milestone, index) => (
-                <div key={index} className="flex items-start space-x-4">
+              {milestones.map((milestone, index) => <div key={index} className="flex items-start space-x-4">
                   <div className="bg-primary text-primary-foreground rounded-full w-16 h-16 flex items-center justify-center font-bold text-sm flex-shrink-0">
                     {milestone.year}
                   </div>
@@ -99,8 +104,7 @@ const About = () => {
                     <h4 className="font-semibold text-foreground text-lg">{milestone.event}</h4>
                     <p className="text-muted-foreground">{milestone.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -120,8 +124,7 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
-              <Card key={index} className="bg-card shadow-card border-border">
+            {capabilities.map((capability, index) => <Card key={index} className="bg-card shadow-card border-border">
                 <CardContent className="p-8">
                   <div className="text-primary mb-4">
                     {capability.icon}
@@ -133,8 +136,7 @@ const About = () => {
                     {capability.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -190,8 +192,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
