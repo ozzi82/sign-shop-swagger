@@ -1,24 +1,31 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import ledSignsImage from "@/assets/led-signs.jpg";
-import vinylBannersImage from "@/assets/vinyl-banners.jpg";
-import pylonSignsImage from "@/assets/pylon-signs.jpg";
+const ledSignsImage = "/lovable-uploads/71fcf487-152f-4a68-8ad8-9075fa11c370.png";
+const vinylBannersImage = "/lovable-uploads/be85f9ad-8d0b-4c0f-8921-f630ba88ee69.png";
+const pylonSignsImage = "/lovable-uploads/b65672d5-65aa-4d28-b91a-f20d6649be08.png";
 
 const Products = () => {
   const products = [
+    {
+      image: "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png",
+      title: "Trimless Channel Letters",
+      description: "True trimless flush-face design with no visible trim lines",
+      price: "Starting at $45/linear ft",
+      features: ["No visible seams", "Weather sealed", "UL listed LEDs", "Custom fonts"]
+    },
+    {
+      image: "/lovable-uploads/35f59ec9-bce4-4cea-bf24-64fe074725e0.png",
+      title: "Cast Block Acrylic Letters",
+      description: "Premium thick-cast acrylic letters with precision CNC cutting",
+      price: "Starting at $8.50/sq in",
+      features: ["1/2\" to 2\" thickness", "Polished edges", "Custom colors", "Weather resistant"]
+    },
     {
       image: ledSignsImage,
       title: "LED Channel Letters",
       description: "Custom illuminated signage for storefronts and buildings",
       price: "Starting at $299",
       features: ["Custom fonts", "LED illumination", "Weather resistant", "UL listed"]
-    },
-    {
-      image: vinylBannersImage,
-      title: "Digital Graphics",
-      description: "Large format prints and vinyl graphics for any application",
-      price: "Starting at $4.99/sq ft",
-      features: ["UV resistant", "Custom sizes", "Multiple substrates", "Laminated options"]
     },
     {
       image: pylonSignsImage,

@@ -23,6 +23,9 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     --primary-glow: 220 85% 28%;
     --primary-light: 220 60% 35%;
+    
+    /* Dark blue for footer */
+    --primary-dark: 220 90% 12%;
 
     /* Sophisticated gray system */
     --secondary: 220 10% 97%;
