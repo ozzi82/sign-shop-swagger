@@ -21,7 +21,8 @@ const FeaturedProducts = () => {
         "3-year comprehensive warranty"
       ],
       badges: ["Most Popular", "Premium"],
-      highlight: true
+      highlight: true,
+      price: "Starting at $24/letter"
     },
     {
       id: "halo-lit-letters",
@@ -66,6 +67,11 @@ const FeaturedProducts = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {product.price && (
+                  <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold shadow-accent">
+                    {product.price}
+                  </div>
+                )}
               </div>
               
               <CardHeader>
@@ -114,7 +120,7 @@ const FeaturedProducts = () => {
                     </Link>
                   </Button>
                   <Button variant="premium" className="flex-1" asChild>
-                    <Link to="/products">Learn More</Link>
+                    <Link to="/products">View Details</Link>
                   </Button>
                 </div>
               </CardContent>

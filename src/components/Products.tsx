@@ -1,35 +1,31 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import trimlessChannelImage from "@/assets/trimless-channel-letters.jpg";
-import haloLitImage from "@/assets/halo-lit-letters.jpg";
-import castBlockImage from "@/assets/cast-block-acrylic.jpg";
-import pylonSignImage from "@/assets/pylon-sign.jpg";
+import ledSignsImage from "@/assets/led-signs.jpg";
+import vinylBannersImage from "@/assets/vinyl-banners.jpg";
+import pylonSignsImage from "@/assets/pylon-signs.jpg";
 
 const Products = () => {
   const products = [
     {
-      image: trimlessChannelImage,
-      title: "Trimless Channel Letters",
-      description: "Professional flush-mounted channel letters with no visible trim lines or seams",
-      features: ["No visible trim lines", "UL listed LED modules", "Weather sealed", "Custom fonts available"]
+      image: ledSignsImage,
+      title: "LED Channel Letters",
+      description: "Custom illuminated signage for storefronts and buildings",
+      price: "Starting at $299",
+      features: ["Custom fonts", "LED illumination", "Weather resistant", "UL listed"]
     },
     {
-      image: haloLitImage,
-      title: "Halo-Lit Channel Letters", 
-      description: "Premium backlit channel letters creating beautiful halo illumination effects",
-      features: ["Even halo glow", "Multiple standoff heights", "Architectural grade", "Warm LED lighting"]
+      image: vinylBannersImage,
+      title: "Digital Graphics",
+      description: "Large format prints and vinyl graphics for any application",
+      price: "Starting at $4.99/sq ft",
+      features: ["UV resistant", "Custom sizes", "Multiple substrates", "Laminated options"]
     },
     {
-      image: castBlockImage,
-      title: "Cast Block Acrylic Letters",
-      description: "Thick dimensional acrylic letters precision-cut for professional signage",
-      features: ["Precision cutting", "Multiple thicknesses", "Various acrylics", "Custom dimensions"]
-    },
-    {
-      image: pylonSignImage,
+      image: pylonSignsImage,
       title: "Pylon Signs",
-      description: "Large roadside signs for maximum visibility and business identification", 
-      features: ["LED illumination", "Custom heights", "Multi-tenant options", "Permit assistance"]
+      description: "High-visibility roadside signs for maximum impact",
+      price: "Starting at $2,999",
+      features: ["LED lighting", "Custom height", "Multi-tenant options", "Permit ready"]
     }
   ];
 
@@ -56,9 +52,14 @@ const Products = () => {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-foreground mb-3">
-                  {product.title}
-                </CardTitle>
+                <div className="flex justify-between items-start mb-2">
+                  <CardTitle className="text-xl font-semibold text-foreground">
+                    {product.title}
+                  </CardTitle>
+                  <span className="text-accent font-semibold text-lg">
+                    {product.price}
+                  </span>
+                </div>
                 <CardDescription className="text-muted-foreground">
                   {product.description}
                 </CardDescription>
@@ -72,11 +73,11 @@ const Products = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex gap-3">
-                  <Button variant="cta" className="flex-1 apple-glow">
+                <div className="flex gap-2">
+                  <Button variant="default" className="flex-1">
                     Get Quote
                   </Button>
-                  <Button variant="premium" className="flex-1">
+                  <Button variant="outline" className="flex-1">
                     Details
                   </Button>
                 </div>
@@ -85,9 +86,9 @@ const Products = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Button variant="hero" size="lg" className="apple-glow-hero">
-            View Complete Product Catalog
+        <div className="text-center mt-12">
+          <Button variant="cta" size="lg">
+            View All Products
           </Button>
         </div>
       </div>
