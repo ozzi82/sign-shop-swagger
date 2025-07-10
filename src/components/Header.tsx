@@ -29,9 +29,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <div className="text-2xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
-              ProSign Manufacturing
-            </div>
+            <img 
+              src="/lovable-uploads/be85f9ad-8d0b-4c0f-8921-f630ba88ee69.png" 
+              alt="Sunlite Signs" 
+              className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}

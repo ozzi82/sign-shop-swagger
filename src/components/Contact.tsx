@@ -9,19 +9,19 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: ["1-800-SIGNPRO", "(555) 123-4567"],
+      details: ["+1 (689) 294-0912"],
       description: "Call us for immediate assistance"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["quotes@signcraft-pro.com", "support@signcraft-pro.com"],
+      details: ["hello@sunlitesigns.com"],
       description: "Get detailed quotes via email"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
-      details: ["1234 Industrial Way", "Manufacturing City, ST 12345"],
+      details: ["5005 W Laurel, Suite 100 PMB1041"],
       description: "Visit our manufacturing facility"
     },
     {

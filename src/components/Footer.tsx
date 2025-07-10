@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="text-2xl font-bold mb-4">
-              ProSign Manufacturing
+              Sunlite Signs
             </div>
             <p className="text-primary-foreground/80 mb-6">
               Wholesale manufacturer of premium channel letters and acrylic signage for sign companies across USA and Canada.
@@ -33,15 +33,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-accent" />
-                <span className="text-primary-foreground/80 text-sm">1-800-PRO-SIGN</span>
+                <span className="text-primary-foreground/80 text-sm">+1 (689) 294-0912</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-accent" />
-                <span className="text-primary-foreground/80 text-sm">orders@prosignmfg.com</span>
+                <span className="text-primary-foreground/80 text-sm">hello@sunlitesigns.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-accent" />
-                <span className="text-primary-foreground/80 text-sm">Industrial Park, Manufacturing City</span>
+                <span className="text-primary-foreground/80 text-sm">5005 W Laurel, Suite 100 PMB1041</span>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-              © 2024 ProSign Manufacturing. All rights reserved. Wholesale supplier to the sign industry.
+              © 2024 Sunlite Signs LLC. All rights reserved. Wholesale supplier to the sign industry.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy" className="text-primary-foreground/60 hover:text-accent transition-colors">
