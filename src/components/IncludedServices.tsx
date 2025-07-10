@@ -5,49 +5,39 @@ import touchUpPaintImage from "@/assets/touch-up-paint.jpg";
 import installationPatternImage from "@/assets/installation-pattern.jpg";
 import powerSuppliesImage from "@/assets/power-supplies.jpg";
 import warrantyImage from "@/assets/warranty.jpg";
-
 const IncludedServices = () => {
-  const services = [
-    {
-      icon: <FileImage className="w-8 h-8" />,
-      title: "Free Production Drawings",
-      description: "Complete technical drawings with dimensions and specifications for every order.",
-      image: designRenderingImage
-    },
-    {
-      icon: <Eye className="w-8 h-8" />,
-      title: "3D Day & Night Views",
-      description: "Realistic 3D renderings showing your signage illuminated and non-illuminated.",
-      highlight: true
-    },
-    {
-      icon: <Palette className="w-8 h-8" />,
-      title: "Touch-Up Paint Included",
-      description: "Matching touch-up paint provided with every painted product order.",
-      image: touchUpPaintImage
-    },
-    {
-      icon: <Package className="w-8 h-8" />,
-      title: "1:1 Installation Patterns",
-      description: "Full-size paper patterns for precise field installation positioning.",
-      image: installationPatternImage
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Power Supplies Included",
-      description: "All necessary transformers and power supplies included with LED products.",
-      image: powerSuppliesImage
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "3-Year Warranty",
-      description: "Comprehensive 3-year warranty coverage on all manufactured products.",
-      image: warrantyImage
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-muted/30">
+  const services = [{
+    icon: <FileImage className="w-8 h-8" />,
+    title: "Free Production Drawings",
+    description: "Complete technical drawings with dimensions and specifications for every order.",
+    image: designRenderingImage
+  }, {
+    icon: <Eye className="w-8 h-8" />,
+    title: "3D Day & Night Views",
+    description: "Realistic 3D renderings showing your signage illuminated and non-illuminated.",
+    highlight: true
+  }, {
+    icon: <Palette className="w-8 h-8" />,
+    title: "Touch-Up Paint Included",
+    description: "Matching touch-up paint provided with every painted product order.",
+    image: touchUpPaintImage
+  }, {
+    icon: <Package className="w-8 h-8" />,
+    title: "1:1 Installation Patterns",
+    description: "Full-size paper patterns for precise field installation positioning.",
+    image: installationPatternImage
+  }, {
+    icon: <Zap className="w-8 h-8" />,
+    title: "Power Supplies Included",
+    description: "All necessary transformers and power supplies included with LED products.",
+    image: powerSuppliesImage
+  }, {
+    icon: <Shield className="w-8 h-8" />,
+    title: "3-Year Warranty",
+    description: "Comprehensive 3-year warranty coverage on all manufactured products.",
+    image: warrantyImage
+  }];
+  return <section className="py-20 bg-slate-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -60,17 +50,10 @@ const IncludedServices = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className={`bg-gradient-card shadow-card hover:shadow-hero transition-all duration-300 border-border ${service.highlight ? 'ring-2 ring-primary/20' : ''}`}>
-              {service.image && (
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
+          {services.map((service, index) => <Card key={index} className={`bg-gradient-card shadow-card hover:shadow-hero transition-all duration-300 border-border ${service.highlight ? 'ring-2 ring-primary/20' : ''}`}>
+              {service.image && <div className="aspect-video overflow-hidden">
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                </div>}
               <CardHeader>
                 <div className="text-primary mb-4">
                   {service.icon}
@@ -82,12 +65,11 @@ const IncludedServices = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Process Timeline */}
-        <div className="bg-card rounded-lg p-8 shadow-card">
+        <div className="rounded-lg p-8 shadow-card bg-slate-900">
           <h3 className="text-3xl font-bold text-foreground mb-8 text-center">
             Our Process: Quote to Delivery
           </h3>
@@ -119,8 +101,6 @@ const IncludedServices = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default IncludedServices;

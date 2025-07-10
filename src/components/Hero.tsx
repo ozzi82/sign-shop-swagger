@@ -6,9 +6,9 @@ const Hero = () => {
   return <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero pt-20">
       {/* Background with parallax effect */}
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Professional channel letter manufacturing facility" className="w-full h-full object-cover opacity-40 scale-105 transition-transform duration-700 hover:scale-110" />
-        <div className="absolute inset-0 bg-gradient-hero opacity-75"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-transparent to-accent/15"></div>
+        <img src={heroImage} alt="Professional channel letter manufacturing facility" className="w-full h-full object-cover opacity-50 scale-105 transition-transform duration-700 hover:scale-110 bg-neutral-950" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-transparent to-accent/20"></div>
       </div>
 
       {/* Floating elements for visual interest */}
@@ -20,32 +20,32 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl">
           <div className="animate-fade-in">
-            <h1 className="text-4xl xl:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+            <h1 className="text-5xl xl:text-8xl font-bold text-primary-foreground mb-8 leading-[0.9] md:text-5xl">
               Wholesale Trimless Channel Letters &
-              <span className="block text-4xl xl:text-7xl mt-2 bg-gradient-to-r from-accent via-orange-500 to-orange-600 bg-clip-text text-transparent font-extrabold">Cast Block Acrylic</span>
-              <span className="block text-lg md:text-xl xl:text-2xl font-normal mt-4 text-primary-foreground/90">Engineered for Sign Professionals</span>
+              <span className="block text-6xl xl:text-9xl mt-2 bg-gradient-to-r from-accent via-yellow-400 to-orange-400 bg-clip-text text-transparent font-extrabold md:text-5xl">Cast Block Acrylic</span>
+              <span className="block text-2xl md:text-3xl xl:text-4xl font-normal mt-6 text-primary-foreground/90">Engineered for Sign Professionals</span>
             </h1>
           </div>
           
           <div className="animate-fade-in" style={{
           animationDelay: '0.3s'
         }}>
-            <p className="text-lg md:text-xl xl:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed" style={{textShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+            <p className="text-xl md:text-2xl xl:text-3xl text-primary-foreground/90 mb-10 max-w-3xl leading-relaxed">
               UL-listed trimless channel letters and precision-cut cast block acrylic letters. 
-              German engineering precision meets Florida speed.
+              German engineering precision meets Florida speed - serving sign companies across USA and Canada.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{
+          <div className="flex flex-col sm:flex-row gap-6 mb-16 animate-fade-in" style={{
           animationDelay: '0.6s'
         }}>
-            <Button variant="cta" size="lg" className="apple-glow-hero text-base xl:text-lg px-8 py-6 font-bold" asChild>
+            <Button variant="cta" size="lg" className="apple-glow-hero text-lg xl:text-xl px-12 py-8 font-bold" asChild>
               <Link to="/contact">
                 Request Wholesale Quote
                 <ArrowRight className="ml-3" />
               </Link>
             </Button>
-            <Button variant="premium" size="lg" className="apple-glow-secondary text-base xl:text-lg px-8 py-6 glass border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/15 font-semibold" asChild>
+            <Button variant="premium" size="lg" className="apple-glow-secondary text-lg xl:text-xl px-12 py-8 glass border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/15 font-semibold" asChild>
               <Link to="/products">
                 View Product Catalog
               </Link>
