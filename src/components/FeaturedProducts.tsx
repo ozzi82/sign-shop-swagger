@@ -5,43 +5,25 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Clock } from "lucide-react";
 import plazaLettersImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
 import haloLettersImage from "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
-
 const FeaturedProducts = () => {
-  const featuredProducts = [
-    {
-      id: "trimless-channel-letters",
-      image: plazaLettersImage,
-      title: "Trimless Channel Letters",
-      description: "True trimless design with no visible seams - our signature product that outperforms traditional channel letters.",
-      features: [
-        "Flush-face design, no trim lines",
-        "UL listed LED modules included",
-        "Weather sealed construction",
-        "Custom fonts and sizes",
-        "3-year comprehensive warranty"
-      ],
-      badges: ["Most Popular", "Premium"],
-      highlight: true,
-      price: "Starting at $24/letter"
-    },
-    {
-      id: "halo-lit-letters",
-      image: haloLettersImage,
-      title: "Halo-Lit Channel Letters",
-      description: "Premium halo-illuminated letters with beautiful warm backlighting effects - perfect for sophisticated architectural applications.",
-      features: [
-        "Even halo illumination effect",
-        "Multiple standoff heights available", 
-        "Premium brushed or painted faces",
-        "Warm LED backlighting",
-        "Architectural quality finish"
-      ],
-      badges: ["Fast Ship"]
-    }
-  ];
-
-  return (
-    <section className="py-24 bg-gradient-surface relative overflow-hidden">
+  const featuredProducts = [{
+    id: "trimless-channel-letters",
+    image: plazaLettersImage,
+    title: "Trimless Channel Letters",
+    description: "True trimless design with no visible seams - our signature product that outperforms traditional channel letters.",
+    features: ["Flush-face design, no trim lines", "UL listed LED modules included", "Weather sealed construction", "Custom fonts and sizes", "3-year comprehensive warranty"],
+    badges: ["Most Popular", "Premium"],
+    highlight: true,
+    price: "Starting at $24/letter"
+  }, {
+    id: "halo-lit-letters",
+    image: haloLettersImage,
+    title: "Halo-Lit Channel Letters",
+    description: "Premium halo-illuminated letters with beautiful warm backlighting effects - perfect for sophisticated architectural applications.",
+    features: ["Even halo illumination effect", "Multiple standoff heights available", "Premium brushed or painted faces", "Warm LED backlighting", "Architectural quality finish"],
+    badges: ["Fast Ship"]
+  }];
+  return <section className="py-24 bg-gradient-surface relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -58,39 +40,26 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-          {featuredProducts.map((product, index) => (
-            <Card key={index} className={`group bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500 border-border/50 overflow-hidden ${product.highlight ? 'ring-2 ring-primary/30 shadow-hero' : ''} hover:scale-[1.02]`}>
+          {featuredProducts.map((product, index) => <Card key={index} className={`group bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500 border-border/50 overflow-hidden ${product.highlight ? 'ring-2 ring-primary/30 shadow-hero' : ''} hover:scale-[1.02]`}>
               <div className="aspect-video overflow-hidden relative">
-                <img 
-                  src={product.image} 
-                  alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
+                <img src={product.image} alt={product.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                {product.price && (
-                  <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold shadow-accent">
-                    {product.price}
-                  </div>
-                )}
+                {product.price}
               </div>
               
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
                   <div className="flex-1">
                     <div className="flex flex-wrap gap-2 mb-2">
-                      {product.badges.map((badge, idx) => (
-                        <Badge key={idx} variant={badge === "Most Popular" ? "default" : "secondary"}>
+                      {product.badges.map((badge, idx) => <Badge key={idx} variant={badge === "Most Popular" ? "default" : "secondary"}>
                           {badge}
-                        </Badge>
-                      ))}
+                        </Badge>)}
                     </div>
                     <CardTitle className="text-2xl font-semibold text-foreground">
                       {product.title}
                     </CardTitle>
                   </div>
-                  {product.highlight && (
-                    <Star className="w-6 h-6 text-yellow-500 fill-current" />
-                  )}
+                  {product.highlight && <Star className="w-6 h-6 text-yellow-500 fill-current" />}
                 </div>
                 <CardDescription className="text-muted-foreground text-base">
                   {product.description}
@@ -102,12 +71,10 @@ const FeaturedProducts = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-3">Key Features</h4>
                   <div className="space-y-2">
-                    {product.features.map((feature, idx) => (
-                      <div key={idx} className="text-sm text-muted-foreground flex items-start">
+                    {product.features.map((feature, idx) => <div key={idx} className="text-sm text-muted-foreground flex items-start">
                         <CheckCircle className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
                         {feature}
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
 
@@ -124,8 +91,7 @@ const FeaturedProducts = () => {
                   </Button>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Quick Stats */}
@@ -168,8 +134,6 @@ const FeaturedProducts = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FeaturedProducts;
