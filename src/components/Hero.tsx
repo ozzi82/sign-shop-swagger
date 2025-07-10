@@ -191,7 +191,7 @@ const Hero = ({ data, query, variables }: HeroProps = {}) => {
             <Button
               variant="cta"
               size="lg"
-              className="text-base px-6 py-4 font-bold"
+              className="text-base px-6 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 font-semibold"
               asChild
             >
               <Link to={content.button_url}>
