@@ -19,13 +19,14 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Wholesale Signage
-            <span className="block text-accent">Manufacturing</span>
+            Wholesale Trimless Channel Letters &
+            <span className="block text-accent">Cast Block Acrylic Letters</span>
+            <span className="block text-2xl md:text-3xl font-normal mt-4">Made for Sign Companies</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl">
-            Premier wholesale manufacturer of trimless channel letters and cast block acrylic letters. 
-            Serving sign companies across USA and Canada with 24-48 hour quote turnaround and 21-day delivery from approval.
+            UL-listed trimless channel letters and precision-cut cast block acrylic letters. 
+            German engineering precision meets Florida speed - serving sign companies across USA and Canada.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">

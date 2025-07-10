@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import TrimlessChannelLetters from "./pages/TrimlessChannelLetters";
+import CastBlockAcrylicLetters from "./pages/CastBlockAcrylicLetters";
+import TrimlessVsTrimCap from "./pages/TrimlessVsTrimCap";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -20,6 +23,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/trimless-channel-letters" element={<TrimlessChannelLetters />} />
+          <Route path="/cast-block-acrylic-letters" element={<CastBlockAcrylicLetters />} />
+          <Route path="/trimless-vs-trim-cap-letters" element={<TrimlessVsTrimCap />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
