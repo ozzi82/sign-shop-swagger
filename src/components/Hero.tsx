@@ -27,30 +27,76 @@ const Hero = () => {
 
   useEffect(() => {
     const fetchHeroContent = async () => {
-      const { data, error } = await supabase
-        .from('website_content')
-        .select('*')
-        .eq('content_type', 'hero')
-        .eq('is_active', true)
-        .single();
+      try {
+        const { data, error } = await supabase
+          .from('website_content')
+          .select('*')
+          .eq('content_type', 'hero')
+          .eq('is_active', true)
+          .maybeSingle();
 
-      if (data && !error) {
+        if (data && !error) {
+          setContent({
+            title: data.title,
+            subtitle: data.subtitle,
+            description: data.description,
+            image_url: data.image_url,
+            button_text: data.button_text,
+            button_url: data.button_url,
+            additional_data: data.additional_data as {
+              tagline: string;
+              secondaryButtonText: string;
+              secondaryButtonUrl: string;
+              stats: Array<{
+                icon: string;
+                value: string;
+                label: string;
+              }>;
+            }
+          });
+        } else if (error) {
+          console.error('Error fetching hero content:', error);
+          // Set fallback content
+          setContent({
+            title: "Wholesale Trimless Channel Letters &",
+            subtitle: "Cast Block Acrylic",
+            description: "UL-listed trimless channel letters and precision-cut cast block acrylic letters. German engineering precision meets Florida speed - serving sign companies across USA and Canada.",
+            image_url: "/lovable-uploads/b65672d5-65aa-4d28-b91a-f20d6649be08.png",
+            button_text: "Request Wholesale Quote",
+            button_url: "/contact",
+            additional_data: {
+              tagline: "Engineered for Sign Professionals",
+              secondaryButtonText: "View Product Catalog",
+              secondaryButtonUrl: "/products",
+              stats: [
+                { icon: "Factory", value: "25+ Years", label: "Manufacturing" },
+                { icon: "Truck", value: "24-48h", label: "Quote Response" },
+                { icon: "Award", value: "UL Listed", label: "Components" },
+                { icon: "Zap", value: "LED", label: "Efficient Lighting" }
+              ]
+            }
+          });
+        }
+      } catch (err) {
+        console.error('Failed to fetch hero content:', err);
+        // Set fallback content on any error
         setContent({
-          title: data.title,
-          subtitle: data.subtitle,
-          description: data.description,
-          image_url: data.image_url,
-          button_text: data.button_text,
-          button_url: data.button_url,
-          additional_data: data.additional_data as {
-            tagline: string;
-            secondaryButtonText: string;
-            secondaryButtonUrl: string;
-            stats: Array<{
-              icon: string;
-              value: string;
-              label: string;
-            }>;
+          title: "Wholesale Trimless Channel Letters &",
+          subtitle: "Cast Block Acrylic",
+          description: "UL-listed trimless channel letters and precision-cut cast block acrylic letters. German engineering precision meets Florida speed - serving sign companies across USA and Canada.",
+          image_url: "/lovable-uploads/b65672d5-65aa-4d28-b91a-f20d6649be08.png",
+          button_text: "Request Wholesale Quote",
+          button_url: "/contact",
+          additional_data: {
+            tagline: "Engineered for Sign Professionals",
+            secondaryButtonText: "View Product Catalog",
+            secondaryButtonUrl: "/products",
+            stats: [
+              { icon: "Factory", value: "25+ Years", label: "Manufacturing" },
+              { icon: "Truck", value: "24-48h", label: "Quote Response" },
+              { icon: "Award", value: "UL Listed", label: "Components" },
+              { icon: "Zap", value: "LED", label: "Efficient Lighting" }
+            ]
           }
         });
       }
@@ -60,7 +106,14 @@ const Hero = () => {
   }, []);
 
   if (!content) {
-    return null; // or a loading spinner
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-background via-background/95 to-background">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
   const getIcon = (iconName: string) => {
