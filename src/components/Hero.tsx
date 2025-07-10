@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Factory, Truck, Award, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/manufacturing-facility.jpg";
+import heroImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
 
 const Hero = () => {
   return (

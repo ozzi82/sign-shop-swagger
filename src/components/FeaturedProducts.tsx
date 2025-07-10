@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Clock } from "lucide-react";
-import trimlessLettersImage from "@/assets/trimless-channel-letters.jpg";
-import castAcrylicImage from "@/assets/cast-acrylic-manufacturing.jpg";
+import plazaLettersImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
+import haloLettersImage from "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
 
 const FeaturedProducts = () => {
   const featuredProducts = [
     {
       id: "trimless-channel-letters",
-      image: trimlessLettersImage,
+      image: plazaLettersImage,
       title: "Trimless Channel Letters",
       description: "True trimless design with no visible seams - our signature product that outperforms traditional channel letters.",
       features: [
@@ -24,16 +24,16 @@ const FeaturedProducts = () => {
       highlight: true
     },
     {
-      id: "cast-acrylic-letters",
-      image: castAcrylicImage,
-      title: "Cast Block Acrylic Letters",
-      description: "Premium thick-cast acrylic letters with precision CNC cutting and polished edges - comparable to Bitro Resno quality.",
+      id: "halo-lit-letters",
+      image: haloLettersImage,
+      title: "Halo-Lit Channel Letters",
+      description: "Premium halo-illuminated letters with beautiful warm backlighting effects - perfect for sophisticated architectural applications.",
       features: [
-        "1/2\" to 2\" thickness options",
-        "Polished edges standard",
-        "Custom colors available",
-        "UV resistant materials",
-        "Precision CNC cutting"
+        "Even halo illumination effect",
+        "Multiple standoff heights available", 
+        "Premium brushed or painted faces",
+        "Warm LED backlighting",
+        "Architectural quality finish"
       ],
       badges: ["Fast Ship"]
     }

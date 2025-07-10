@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { CheckCircle, Zap, Layers, Scissors, Wrench, Star, Clock, Shield } from "lucide-react";
-import trimlessLettersImage from "@/assets/trimless-channel-letters.jpg";
-import castAcrylicImage from "@/assets/cast-acrylic-manufacturing.jpg";
+import trimlessLettersImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
+import haloLettersImage from "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
 
 const Products = () => {
   const products = [
@@ -33,25 +33,25 @@ const Products = () => {
       }
     },
     {
-      id: "cast-acrylic-letters",
-      image: castAcrylicImage,
-      title: "Cast Block Acrylic Letters",
-      description: "Thick cast acrylic letters with precision CNC cutting",
+      id: "halo-lit-letters",
+      image: haloLettersImage,
+      title: "Halo-Lit Channel Letters",
+      description: "Sophisticated backlit illumination for premium architectural signage",
       features: [
-        "1/2\" to 2\" thickness available",
-        "Polished edges standard",
-        "Custom colors and finishes",
-        "UV resistant materials",
-        "Precision CNC cutting",
+        "Even halo backlighting effect",
+        "Multiple standoff heights available",
+        "Premium brushed or painted faces", 
+        "Warm LED backlighting",
+        "Architectural quality finish",
         "21-day delivery from approval"
       ],
       badges: ["Fast Ship"],
       specifications: {
-        "Thickness Options": "1/2\", 3/4\", 1\", 1.5\", 2\"",
-        "Colors": "Standard & Custom Matched",
-        "Edge Finish": "Polished, Satin, Frosted",
-        "Mounting": "Studs, VHB Tape, Standoffs",
-        "Maximum Size": "36\" x 48\" per piece"
+        "Standoff Heights": "1\", 1.5\", 2\", 3\"",
+        "Face Materials": "Brushed Aluminum, Painted Metal",
+        "LED Options": "Warm White, Cool White",
+        "Mounting": "Threaded Rod, Tube System",
+        "Maximum Size": "48\" x 96\" per letter"
       }
     },
     {
