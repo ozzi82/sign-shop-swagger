@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { CheckCircle, Zap, Layers, Scissors, Wrench, Star, Clock, Shield } from "lucide-react";
-const trimlessLettersImage = "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
-const haloLettersImage = "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
+const trimlessLettersImage = "/lovable-uploads/a0baa3e7-bbb7-4970-99af-72d0cc80ff1a.png";
+const haloLettersImage = "/lovable-uploads/d0b014b4-c902-4fe3-8081-494eb1495e81.png";
+const flatCutLettersImage = "/lovable-uploads/582d3875-a351-443c-b929-7d112a49cb51.png";
+const edgeluxeLettersImage = "/lovable-uploads/6923d1c5-a3c7-48d5-8e69-63fdc5586279.png";
+
 const Products = () => {
   const products = [{
     id: "trimless-channel-letters",
@@ -38,6 +41,7 @@ const Products = () => {
     }
   }, {
     id: "flat-cut-letters",
+    image: flatCutLettersImage,
     title: "Flat Cut Metal Letters",
     description: "Laser cut aluminum and stainless steel letters",
     features: ["Laser precision cutting", "Multiple metal options", "Powder coat finishes", "Brushed stainless available", "Custom thicknesses", "2-3 day production"],
@@ -50,8 +54,9 @@ const Products = () => {
       "Mounting": "Studs, Standoffs, Direct"
     }
   }, {
-    id: "backlit-letters",
-    title: "Backlit/Halo Channel Letters",
+    id: "edgeluxe-lp11",
+    image: edgeluxeLettersImage,
+    title: "Edgeluxe LP11",
     description: "Reverse illuminated channel letters for elegant lighting",
     features: ["Even backlit illumination", "Multiple halo effects", "Energy efficient LEDs", "Custom letter spacing", "Premium construction", "7-10 day production"],
     badges: ["Premium"],
