@@ -44,39 +44,48 @@ const Hero = () => {
             image_url: data.image_url,
             button_text: data.button_text,
             button_url: data.button_url,
-            additional_data: data.additional_data,
+            additional_data: data.additional_data as HeroContent["additional_data"],
           });
         } else {
-          throw error;
+          console.error("Error fetching hero content:", error);
+          setFallbackContent();
         }
-      } catch (error) {
-        console.error("Error fetching hero content:", error);
-        setContent({
-          title: "Wholesale Trimless Channel Letters &",
-          subtitle: "Cast Block Acrylic",
-          description:
-            "UL-listed trimless channel letters and precision-cut cast block acrylic letters. German engineering precision meets Florida speed - serving sign companies across USA and Canada.",
-          image_url:
-            "/lovable-uploads/b65672d5-65aa-4d28-b91a-f20d6649be08.png",
-          button_text: "Request Wholesale Quote",
-          button_url: "/contact",
-          additional_data: {
-            tagline: "Engineered for Sign Professionals",
-            secondaryButtonText: "View Product Catalog",
-            secondaryButtonUrl: "/products",
-            stats: [
-              { icon: "Factory", value: "25+ Years", label: "Manufacturing" },
-              { icon: "Truck", value: "24-48h", label: "Quote Response" },
-              { icon: "Award", value: "UL Listed", label: "Components" },
-              { icon: "Zap", value: "LED", label: "Efficient Lighting" },
-            ],
-          },
-        });
+      } catch (err) {
+        console.error("Failed to fetch hero content:", err);
+        setFallbackContent();
       }
+    };
+
+    const setFallbackContent = () => {
+      setContent({
+        title: "Wholesale Trimless Channel Letters &",
+        subtitle: "Cast Block Acrylic",
+        description:
+          "UL-listed trimless channel letters and precision-cut cast block acrylic letters. German engineering precision meets Florida speed - serving sign companies across USA and Canada.",
+        image_url: "/lovable-uploads/b65672d5-65aa-4d28-b91a-f20d6649be08.png",
+        button_text: "Request Wholesale Quote",
+        button_url: "/contact",
+        additional_data: {
+          tagline: "Engineered for Sign Professionals",
+          secondaryButtonText: "View Product Catalog",
+          secondaryButtonUrl: "/products",
+          stats: [
+            { icon: "Factory", value: "25+ Years", label: "Manufacturing" },
+            { icon: "Truck", value: "24-48h", label: "Quote Response" },
+            { icon: "Award", value: "UL Listed", label: "Components" },
+            { icon: "Zap", value: "LED", label: "Efficient Lighting" },
+          ],
+        },
+      });
     };
 
     fetchHeroContent();
   }, []);
+
+  const getIcon = (iconName: string) => {
+    const icons = { Factory, Truck, Award, Zap };
+    return icons[iconName as keyof typeof icons] || Factory;
+  };
 
   if (!content) {
     return (
@@ -89,11 +98,6 @@ const Hero = () => {
     );
   }
 
-  const getIcon = (iconName: string) => {
-    const icons = { Factory, Truck, Award, Zap };
-    return icons[iconName as keyof typeof icons] || Factory;
-  };
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background image */}
@@ -101,13 +105,13 @@ const Hero = () => {
         <img
           src={content.image_url}
           alt="Professional channel letter manufacturing facility"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-left"
         />
       </div>
 
-      {/* Foreground content */}
-      <div className="container mx-auto px-6 relative z-10 flex justify-center items-center min-h-screen">
-        <div className="bg-background/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl p-6 md:p-10 max-w-xl w-full">
+      {/* Foreground content aligned to right */}
+      <div className="container mx-auto px-6 relative z-10 flex justify-end items-center min-h-screen">
+        <div className="bg-background/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl p-6 md:p-10 max-w-xl w-full mr-0 lg:mr-12">
           <div className="animate-fade-in">
             <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
               {content.title}
