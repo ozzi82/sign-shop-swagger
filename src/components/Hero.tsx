@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-primary-foreground mb-8 leading-[0.9]">
               Wholesale Trimless Channel Letters &
-              <span className="block text-6xl md:text-8xl xl:text-9xl mt-2 bg-gradient-to-r from-accent via-yellow-400 to-orange-400 bg-clip-text text-transparent font-extrabold">Cast Block Acrylic</span>
+              <span className="block text-6xl md:text-8xl xl:text-9xl mt-2 bg-gradient-to-r from-accent via-orange-400 to-accent-dark bg-clip-text text-transparent font-extrabold">Cast Block Acrylic</span>
               <span className="block text-2xl md:text-3xl xl:text-4xl font-normal mt-6 text-primary-foreground/90">Engineered for Sign Professionals</span>
             </h1>
           </div>

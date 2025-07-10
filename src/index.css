@@ -8,54 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern professional color palette */
+    /* Brand color palette - #002347 and #FD7702 */
     --background: 0 0% 99%;
-    --foreground: 220 15% 12%;
+    --foreground: 208 50% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 12%;
+    --card-foreground: 208 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 12%;
+    --popover-foreground: 208 50% 15%;
 
-    /* Premium navy blue */
-    --primary: 220 90% 18%;
+    /* Primary brand blue #002347 */
+    --primary: 208 100% 14%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 85% 28%;
-    --primary-light: 220 60% 35%;
+    --primary-glow: 208 90% 25%;
+    --primary-light: 208 80% 35%;
 
     /* Sophisticated gray system */
-    --secondary: 220 10% 97%;
-    --secondary-foreground: 220 15% 20%;
+    --secondary: 208 15% 97%;
+    --secondary-foreground: 208 30% 20%;
 
-    --muted: 220 8% 95%;
-    --muted-foreground: 220 12% 50%;
+    --muted: 208 10% 95%;
+    --muted-foreground: 208 15% 50%;
 
-    /* Premium gold accent */
-    --accent: 45 95% 58%;
-    --accent-foreground: 220 15% 12%;
-    --accent-muted: 45 85% 85%;
+    /* Brand orange accent #FD7702 */
+    --accent: 25 98% 51%;
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 25 90% 85%;
+    --accent-dark: 25 100% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 12% 93%;
-    --ring: 220 90% 18%;
+    --border: 208 20% 88%;
+    --input: 208 15% 93%;
+    --ring: 208 100% 14%;
 
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 18%), hsl(220 85% 28%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 15%) 0%, hsl(220 85% 25%) 50%, hsl(220 80% 35%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 10% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 95% 58%), hsl(40 90% 65%));
-    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 8% 98%));
+    /* Brand gradients using #002347 and #FD7702 */
+    --gradient-primary: linear-gradient(135deg, hsl(208 100% 14%), hsl(208 90% 25%));
+    --gradient-hero: linear-gradient(135deg, hsl(208 100% 10%) 0%, hsl(208 100% 14%) 50%, hsl(208 90% 20%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(208 10% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 98% 51%), hsl(25 90% 58%));
+    --gradient-brand: linear-gradient(135deg, hsl(208 100% 14%), hsl(25 98% 51%));
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(208 8% 98%));
     
-    /* Enhanced shadows system */
-    --shadow-sm: 0 1px 3px 0 hsl(220 15% 12% / 0.05);
-    --shadow-card: 0 4px 25px -4px hsl(220 15% 12% / 0.08), 0 2px 8px -2px hsl(220 15% 12% / 0.04);
-    --shadow-hero: 0 25px 80px -15px hsl(220 90% 18% / 0.25);
-    --shadow-glow: 0 0 40px hsl(220 85% 28% / 0.15);
-    --shadow-accent: 0 10px 30px -5px hsl(45 95% 58% / 0.2);
+    /* Enhanced shadows system using brand colors */
+    --shadow-sm: 0 1px 3px 0 hsl(208 100% 14% / 0.05);
+    --shadow-card: 0 4px 25px -4px hsl(208 100% 14% / 0.08), 0 2px 8px -2px hsl(208 100% 14% / 0.04);
+    --shadow-hero: 0 25px 80px -15px hsl(208 100% 14% / 0.25);
+    --shadow-glow: 0 0 40px hsl(208 90% 25% / 0.15);
+    --shadow-accent: 0 10px 30px -5px hsl(25 98% 51% / 0.2);
+    --shadow-brand: 0 0 60px hsl(25 98% 51% / 0.3);
     
     /* Premium transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -81,50 +84,53 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 25% 6%;
-    --foreground: 220 10% 95%;
+    --background: 208 30% 6%;
+    --foreground: 208 10% 95%;
 
-    --card: 220 20% 8%;
-    --card-foreground: 220 10% 95%;
+    --card: 208 25% 8%;
+    --card-foreground: 208 10% 95%;
 
-    --popover: 220 20% 8%;
-    --popover-foreground: 220 10% 95%;
+    --popover: 208 25% 8%;
+    --popover-foreground: 208 10% 95%;
 
-    --primary: 220 85% 65%;
-    --primary-foreground: 220 25% 6%;
-    --primary-glow: 220 90% 75%;
-    --primary-light: 220 80% 70%;
+    --primary: 25 98% 51%;
+    --primary-foreground: 208 100% 14%;
+    --primary-glow: 25 95% 60%;
+    --primary-light: 25 90% 65%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 220 10% 85%;
+    --secondary: 208 20% 15%;
+    --secondary-foreground: 208 10% 85%;
 
-    --muted: 220 12% 12%;
-    --muted-foreground: 220 8% 55%;
+    --muted: 208 15% 12%;
+    --muted-foreground: 208 8% 55%;
 
-    --accent: 45 95% 70%;
-    --accent-foreground: 220 25% 6%;
-    --accent-muted: 45 60% 25%;
+    --accent: 25 98% 55%;
+    --accent-foreground: 208 100% 14%;
+    --accent-muted: 25 60% 25%;
+    --accent-dark: 25 100% 45%;
 
     --destructive: 0 75% 65%;
-    --destructive-foreground: 220 10% 95%;
+    --destructive-foreground: 208 10% 95%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 18%;
-    --ring: 220 85% 65%;
+    --border: 208 20% 20%;
+    --input: 208 20% 18%;
+    --ring: 25 98% 51%;
 
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 85% 65%), hsl(220 90% 75%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 25% 4%) 0%, hsl(220 25% 8%) 50%, hsl(220 20% 12%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 20% 8%), hsl(220 15% 10%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 95% 70%), hsl(40 90% 75%));
-    --gradient-surface: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 15% 6%));
+    /* Dark mode gradients using brand colors */
+    --gradient-primary: linear-gradient(135deg, hsl(208 100% 14%), hsl(25 98% 51%));
+    --gradient-hero: linear-gradient(135deg, hsl(208 30% 4%) 0%, hsl(208 25% 8%) 50%, hsl(208 20% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(208 25% 8%), hsl(208 20% 10%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 98% 55%), hsl(25 90% 65%));
+    --gradient-brand: linear-gradient(135deg, hsl(25 98% 51%), hsl(208 100% 14%));
+    --gradient-surface: linear-gradient(180deg, hsl(208 25% 8%), hsl(208 20% 6%));
     
-    /* Dark mode shadows */
-    --shadow-sm: 0 1px 3px 0 hsl(220 25% 0% / 0.2);
-    --shadow-card: 0 4px 25px -4px hsl(220 25% 0% / 0.3), 0 2px 8px -2px hsl(220 25% 0% / 0.1);
-    --shadow-hero: 0 25px 80px -15px hsl(220 85% 65% / 0.15);
-    --shadow-glow: 0 0 40px hsl(220 85% 65% / 0.1);
-    --shadow-accent: 0 10px 30px -5px hsl(45 95% 70% / 0.1);
+    /* Dark mode shadows using brand colors */
+    --shadow-sm: 0 1px 3px 0 hsl(208 30% 0% / 0.2);
+    --shadow-card: 0 4px 25px -4px hsl(208 30% 0% / 0.3), 0 2px 8px -2px hsl(208 30% 0% / 0.1);
+    --shadow-hero: 0 25px 80px -15px hsl(25 98% 51% / 0.15);
+    --shadow-glow: 0 0 40px hsl(25 98% 51% / 0.1);
+    --shadow-accent: 0 10px 30px -5px hsl(25 98% 55% / 0.1);
+    --shadow-brand: 0 0 60px hsl(25 98% 51% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -233,15 +239,16 @@ All colors MUST be HSL.
     transform: translateX(100%);
   }
 
-  /* Apple Intelligence Siri-style glowing effects */
+  /* Apple Intelligence button glow effects using brand colors */
   .apple-glow {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-muted)));
+    background: var(--gradient-brand);
     box-shadow: 
       0 0 20px hsl(var(--accent) / 0.4),
       0 0 40px hsl(var(--accent) / 0.2),
       0 8px 32px hsl(var(--accent) / 0.3);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(var(--accent) / 0.3);
   }
 
   .apple-glow::before {
@@ -250,24 +257,25 @@ All colors MUST be HSL.
     inset: -2px;
     background: linear-gradient(45deg, 
       hsl(var(--accent)),
-      hsl(var(--primary-glow)),
+      hsl(var(--primary)),
       hsl(var(--accent)),
-      hsl(var(--primary))
+      hsl(var(--primary-glow))
     );
     background-size: 400% 400%;
     border-radius: inherit;
     z-index: -1;
-    animation: glow-border 3s ease infinite;
+    animation: brand-glow 3s ease infinite;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
   .apple-glow:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: 
       0 0 30px hsl(var(--accent) / 0.6),
       0 0 60px hsl(var(--accent) / 0.4),
-      0 12px 40px hsl(var(--accent) / 0.4);
+      0 12px 40px hsl(var(--accent) / 0.4),
+      var(--shadow-brand);
   }
 
   .apple-glow:hover::before {
@@ -276,13 +284,14 @@ All colors MUST be HSL.
 
   .apple-glow-hero {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--accent)), hsl(40 90% 65%));
+    background: var(--gradient-brand);
     box-shadow: 
       0 0 30px hsl(var(--accent) / 0.5),
       0 0 60px hsl(var(--accent) / 0.3),
-      0 12px 40px hsl(var(--accent) / 0.4);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid hsl(var(--accent) / 0.3);
+      0 12px 40px hsl(var(--accent) / 0.4),
+      var(--shadow-brand);
+    transition: var(--transition-smooth);
+    border: 2px solid hsl(var(--accent) / 0.4);
   }
 
   .apple-glow-hero::before {
@@ -291,33 +300,39 @@ All colors MUST be HSL.
     inset: -3px;
     background: linear-gradient(45deg, 
       hsl(var(--accent)),
-      hsl(40 95% 70%),
+      hsl(var(--primary)),
+      hsl(var(--accent-dark)),
       hsl(var(--primary-glow)),
       hsl(var(--accent))
     );
-    background-size: 400% 400%;
+    background-size: 300% 300%;
     border-radius: inherit;
     z-index: -1;
-    animation: glow-border 2s ease infinite;
-    opacity: 0.8;
+    animation: brand-glow-intense 2s ease infinite;
+    opacity: 0.9;
   }
 
   .apple-glow-hero:hover {
-    transform: translateY(-3px) scale(1.02);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 
       0 0 50px hsl(var(--accent) / 0.8),
       0 0 100px hsl(var(--accent) / 0.5),
-      0 20px 60px hsl(var(--accent) / 0.5);
+      0 20px 60px hsl(var(--accent) / 0.5),
+      0 0 120px hsl(var(--primary) / 0.3);
   }
 
   .apple-glow-secondary {
     position: relative;
+    background: linear-gradient(135deg, 
+      hsl(var(--primary) / 0.1), 
+      hsl(var(--accent) / 0.05)
+    );
+    border: 2px solid hsl(var(--primary) / 0.3);
     box-shadow: 
-      0 0 20px hsl(var(--primary-glow) / 0.3),
-      0 0 40px hsl(var(--primary-glow) / 0.2),
-      0 8px 32px hsl(var(--primary-glow) / 0.2);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 2px solid hsl(var(--primary-glow) / 0.3);
+      0 0 20px hsl(var(--primary) / 0.2),
+      0 0 40px hsl(var(--accent) / 0.1),
+      0 8px 32px hsl(var(--primary) / 0.2);
+    transition: var(--transition-smooth);
   }
 
   .apple-glow-secondary::before {
@@ -325,27 +340,69 @@ All colors MUST be HSL.
     position: absolute;
     inset: -2px;
     background: linear-gradient(45deg, 
+      hsl(var(--primary)),
+      hsl(var(--accent) / 0.6),
       hsl(var(--primary-glow)),
-      hsl(var(--accent) / 0.7),
-      hsl(var(--primary-glow)),
-      hsl(var(--accent) / 0.7)
+      hsl(var(--accent) / 0.4)
     );
     background-size: 400% 400%;
     border-radius: inherit;
     z-index: -1;
-    animation: glow-border 4s ease infinite;
-    opacity: 0.6;
+    animation: brand-glow-subtle 4s ease infinite;
+    opacity: 0.3;
   }
 
   .apple-glow-secondary:hover {
     transform: translateY(-3px) scale(1.02);
+    border-color: hsl(var(--accent) / 0.5);
     box-shadow: 
-      0 0 40px hsl(var(--primary-glow) / 0.6),
-      0 0 80px hsl(var(--primary-glow) / 0.4),
-      0 20px 60px hsl(var(--primary-glow) / 0.4);
+      0 0 40px hsl(var(--primary) / 0.4),
+      0 0 80px hsl(var(--accent) / 0.3),
+      0 20px 60px hsl(var(--primary) / 0.3);
   }
 
-  @keyframes glow-border {
+  .apple-glow-secondary:hover::before {
+    opacity: 0.6;
+  }
+
+  /* Brand gradient text using core colors */
+  .gradient-text {
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: brand-gradient-shift 4s ease-in-out infinite;
+  }
+
+  @keyframes brand-glow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes brand-glow-intense {
+    0%, 100% { 
+      background-position: 0% 50%;
+      transform: scale(1);
+    }
+    50% { 
+      background-position: 100% 50%;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes brand-glow-subtle {
+    0%, 100% { 
+      background-position: 0% 50%;
+      opacity: 0.3;
+    }
+    50% { 
+      background-position: 100% 50%;
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes brand-gradient-shift {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
   }
