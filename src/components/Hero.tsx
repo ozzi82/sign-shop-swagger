@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="animate-fade-in" style={{
           animationDelay: '0.3s'
         }}>
-            <p className="text-lg md:text-xl xl:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl xl:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed" style={{textShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
               UL-listed trimless channel letters and precision-cut cast block acrylic letters. 
               German engineering precision meets Florida speed.
             </p>
