@@ -5,38 +5,47 @@ import heroImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-hero">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
+      {/* Background with parallax effect */}
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
           alt="Professional channel letter manufacturing facility"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-25 scale-105 transition-transform duration-700 hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-transparent to-accent/20"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Wholesale Trimless Channel Letters &
-            <span className="block text-accent">Cast Block Acrylic Letters</span>
-            <span className="block text-2xl md:text-3xl font-normal mt-4">Made for Sign Companies</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl">
-            UL-listed trimless channel letters and precision-cut cast block acrylic letters. 
-            German engineering precision meets Florida speed - serving sign companies across USA and Canada.
-          </p>
+      {/* Floating elements for visual interest */}
+      <div className="absolute top-20 right-20 w-32 h-32 bg-accent/10 rounded-full blur-3xl float"></div>
+      <div className="absolute bottom-40 left-20 w-48 h-48 bg-primary-glow/20 rounded-full blur-3xl float" style={{animationDelay: '2s'}}></div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="cta" size="lg" className="text-lg px-8 py-6" asChild>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-5xl">
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-primary-foreground mb-8 leading-[0.9]">
+              Wholesale Trimless Channel Letters &
+              <span className="block gradient-text text-6xl md:text-8xl xl:text-9xl mt-2">Cast Block Acrylic</span>
+              <span className="block text-2xl md:text-3xl xl:text-4xl font-normal mt-6 text-primary-foreground/80">Engineered for Sign Professionals</span>
+            </h1>
+          </div>
+          
+          <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <p className="text-xl md:text-2xl xl:text-3xl text-primary-foreground/90 mb-10 max-w-3xl leading-relaxed">
+              UL-listed trimless channel letters and precision-cut cast block acrylic letters. 
+              German engineering precision meets Florida speed - serving sign companies across USA and Canada.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 mb-16 animate-fade-in" style={{animationDelay: '0.6s'}}>
+            <Button variant="cta" size="lg" className="text-lg xl:text-xl px-10 py-8 shadow-glow" asChild>
               <Link to="/contact">
                 Request Wholesale Quote
-                <ArrowRight className="ml-2" />
+                <ArrowRight className="ml-3" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+            <Button variant="premium" size="lg" className="text-lg xl:text-xl px-10 py-8 glass border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
               <Link to="/products">
                 View Product Catalog
               </Link>

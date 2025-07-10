@@ -21,7 +21,8 @@ const FeaturedProducts = () => {
         "3-year comprehensive warranty"
       ],
       badges: ["Most Popular", "Premium"],
-      highlight: true
+      highlight: true,
+      price: "Starting at $24/letter"
     },
     {
       id: "halo-lit-letters",
@@ -40,27 +41,37 @@ const FeaturedProducts = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Featured Products
+    <section className="py-24 bg-gradient-surface relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-6 relative">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">
+            <span className="gradient-text">Featured Products</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Our most popular wholesale signage products, trusted by sign companies across North America. 
             24-48 hour quotes, professional drawings included, 21-day delivery from approval.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           {featuredProducts.map((product, index) => (
-            <Card key={index} className={`bg-gradient-card shadow-card hover:shadow-hero transition-all duration-300 border-border overflow-hidden ${product.highlight ? 'ring-2 ring-primary/20' : ''}`}>
-              <div className="aspect-video overflow-hidden">
+            <Card key={index} className={`group bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500 border-border/50 overflow-hidden ${product.highlight ? 'ring-2 ring-primary/30 shadow-hero' : ''} hover:scale-[1.02]`}>
+              <div className="aspect-video overflow-hidden relative">
                 <img 
                   src={product.image} 
                   alt={product.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {product.price && (
+                  <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold shadow-accent">
+                    {product.price}
+                  </div>
+                )}
               </div>
               
               <CardHeader>
@@ -101,14 +112,14 @@ const FeaturedProducts = () => {
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-3 pt-4">
-                  <Button className="flex-1" asChild>
+                <div className="flex gap-4 pt-6">
+                  <Button variant="cta" className="flex-1 btn-premium" asChild>
                     <Link to="/contact">
                       Get Quote
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </Button>
-                  <Button variant="outline" className="flex-1" asChild>
+                  <Button variant="premium" className="flex-1" asChild>
                     <Link to="/products">View Details</Link>
                   </Button>
                 </div>
@@ -118,35 +129,41 @@ const FeaturedProducts = () => {
         </div>
 
         {/* Quick Stats */}
-        <div className="bg-muted/30 rounded-lg p-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <Clock className="w-8 h-8 text-primary mx-auto mb-4" />
-              <div className="text-2xl font-bold text-primary mb-2">24-48h</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Quote Response</div>
+        <div className="glass rounded-2xl p-10 border-border/50">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center group">
+              <div className="bg-gradient-primary p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+                <Clock className="w-10 h-10 text-primary-foreground" />
+              </div>
+              <div className="text-3xl font-bold gradient-text mb-3">24-48h</div>
+              <div className="text-xl font-semibold text-foreground mb-3">Quote Response</div>
               <div className="text-muted-foreground">Fast quotes on all products</div>
             </div>
-            <div className="text-center">
-              <CheckCircle className="w-8 h-8 text-primary mx-auto mb-4" />
-              <div className="text-2xl font-bold text-primary mb-2">21 Days</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Total Delivery</div>
+            <div className="text-center group">
+              <div className="bg-gradient-accent p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-accent group-hover:scale-110 transition-transform duration-300">
+                <CheckCircle className="w-10 h-10 text-accent-foreground" />
+              </div>
+              <div className="text-3xl font-bold gradient-text mb-3">21 Days</div>
+              <div className="text-xl font-semibold text-foreground mb-3">Total Delivery</div>
               <div className="text-muted-foreground">From art approval to your door</div>
             </div>
-            <div className="text-center">
-              <Star className="w-8 h-8 text-primary mx-auto mb-4" />
-              <div className="text-2xl font-bold text-primary mb-2">3 Years</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Warranty</div>
+            <div className="text-center group">
+              <div className="bg-gradient-primary p-4 rounded-2xl w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+                <Star className="w-10 h-10 text-primary-foreground" />
+              </div>
+              <div className="text-3xl font-bold gradient-text mb-3">3 Years</div>
+              <div className="text-xl font-semibold text-foreground mb-3">Warranty</div>
               <div className="text-muted-foreground">Comprehensive coverage</div>
             </div>
           </div>
         </div>
 
         {/* CTA to Products */}
-        <div className="text-center mt-12">
-          <Button size="lg" asChild>
+        <div className="text-center mt-16">
+          <Button variant="hero" size="lg" className="text-xl px-12 py-8 btn-premium" asChild>
             <Link to="/products">
               View Complete Product Catalog
-              <ArrowRight className="ml-2" />
+              <ArrowRight className="ml-3" />
             </Link>
           </Button>
         </div>

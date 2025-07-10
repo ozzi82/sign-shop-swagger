@@ -24,12 +24,12 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="fixed top-0 w-full glass border-b border-border/50 z-50 shadow-sm">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <Link to="/" className="flex items-center group">
+            <div className="text-2xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
               ProSign Manufacturing
             </div>
           </Link>
@@ -40,26 +40,29 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`transition-colors ${
+                className={`relative py-2 transition-all duration-300 group ${
                   isActive(item.href) 
                     ? "text-primary font-medium" 
                     : "text-foreground hover:text-primary"
                 }`}
               >
                 {item.name}
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-primary transition-all duration-300 ${
+                  isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                }`} />
               </Link>
             ))}
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="mr-2"
+              className="mr-2 hover:bg-accent/20 transition-colors duration-300"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <Button variant="cta" size="sm" asChild>
+            <Button variant="cta" size="sm" className="btn-premium shadow-accent" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>
           </nav>
