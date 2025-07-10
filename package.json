@@ -8,7 +8,9 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
+    "tina-build-env": "node scripts/tina-cli-build.js", 
     "preview": "vite preview"
+    
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -46,6 +48,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
+    "dotenv": "^17.2.0",
     "embla-carousel-react": "^8.3.0",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.462.0",
