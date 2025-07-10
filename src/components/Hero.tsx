@@ -5,7 +5,7 @@ import heroImage from "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero pt-20">
       {/* Background with parallax effect */}
       <div className="absolute inset-0">
         <img 
@@ -18,16 +18,16 @@ const Hero = () => {
       </div>
 
       {/* Floating elements for visual interest */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-accent/10 rounded-full blur-3xl float"></div>
+      <div className="absolute top-32 right-20 w-32 h-32 bg-accent/10 rounded-full blur-3xl float"></div>
       <div className="absolute bottom-40 left-20 w-48 h-48 bg-primary-glow/20 rounded-full blur-3xl float" style={{animationDelay: '2s'}}></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl">
+        <div className="max-w-6xl">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-primary-foreground mb-8 leading-[0.9]">
               Wholesale Trimless Channel Letters &
-              <span className="block gradient-text text-6xl md:text-8xl xl:text-9xl mt-2">Cast Block Acrylic</span>
-              <span className="block text-2xl md:text-3xl xl:text-4xl font-normal mt-6 text-primary-foreground/80">Engineered for Sign Professionals</span>
+              <span className="block text-6xl md:text-8xl xl:text-9xl mt-2 bg-gradient-to-r from-accent via-yellow-400 to-orange-400 bg-clip-text text-transparent font-extrabold">Cast Block Acrylic</span>
+              <span className="block text-2xl md:text-3xl xl:text-4xl font-normal mt-6 text-primary-foreground/90">Engineered for Sign Professionals</span>
             </h1>
           </div>
           
@@ -39,13 +39,13 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 mb-16 animate-fade-in" style={{animationDelay: '0.6s'}}>
-            <Button variant="cta" size="lg" className="text-lg xl:text-xl px-10 py-8 shadow-glow" asChild>
+            <Button variant="cta" size="lg" className="apple-glow-hero text-lg xl:text-xl px-12 py-8 font-bold" asChild>
               <Link to="/contact">
                 Request Wholesale Quote
                 <ArrowRight className="ml-3" />
               </Link>
             </Button>
-            <Button variant="premium" size="lg" className="text-lg xl:text-xl px-10 py-8 glass border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+            <Button variant="premium" size="lg" className="apple-glow-secondary text-lg xl:text-xl px-12 py-8 glass border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/15 font-semibold" asChild>
               <Link to="/products">
                 View Product Catalog
               </Link>
