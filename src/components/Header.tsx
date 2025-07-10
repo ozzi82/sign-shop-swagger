@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useTheme } from "next-themes";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const { theme, setTheme } = useTheme();
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -30,8 +28,8 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img 
-              src="/lovable-uploads/be85f9ad-8d0b-4c0f-8921-f630ba88ee69.png" 
-              alt="Sunlite Signs" 
+              src="/lovable-uploads/f04a9b84-edea-4845-8540-e15766cfb5d6.png" 
+              alt="Sunlite Signs - Lighting Up Your Brand" 
               className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
             />
           </Link>
@@ -54,16 +52,6 @@ const Header = () => {
                 }`} />
               </Link>
             ))}
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="mr-4 hover:bg-accent/20 transition-all duration-300 hover:scale-110"
-            >
-              <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
             <Button variant="cta" size="lg" className="apple-glow px-8 py-3 text-lg font-semibold" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>

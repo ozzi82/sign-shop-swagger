@@ -31,10 +31,10 @@ All colors MUST be HSL.
     --muted: 220 8% 95%;
     --muted-foreground: 220 12% 50%;
 
-    /* Premium gold accent */
-    --accent: 45 95% 58%;
+    /* Orange accent - brand color */
+    --accent: 25 95% 53%;
     --accent-foreground: 220 15% 12%;
-    --accent-muted: 45 85% 85%;
+    --accent-muted: 25 85% 75%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -47,7 +47,7 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(220 90% 18%), hsl(220 85% 28%));
     --gradient-hero: linear-gradient(135deg, hsl(220 90% 15%) 0%, hsl(220 85% 25%) 50%, hsl(220 80% 35%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 10% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 95% 58%), hsl(40 90% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(20 90% 60%));
     --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 8% 98%));
     
     /* Enhanced shadows system */
@@ -55,7 +55,7 @@ All colors MUST be HSL.
     --shadow-card: 0 4px 25px -4px hsl(220 15% 12% / 0.08), 0 2px 8px -2px hsl(220 15% 12% / 0.04);
     --shadow-hero: 0 25px 80px -15px hsl(220 90% 18% / 0.25);
     --shadow-glow: 0 0 40px hsl(220 85% 28% / 0.15);
-    --shadow-accent: 0 10px 30px -5px hsl(45 95% 58% / 0.2);
+    --shadow-accent: 0 10px 30px -5px hsl(25 95% 53% / 0.2);
     
     /* Premium transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -101,9 +101,9 @@ All colors MUST be HSL.
     --muted: 220 12% 12%;
     --muted-foreground: 220 8% 55%;
 
-    --accent: 45 95% 70%;
+    --accent: 25 95% 60%;
     --accent-foreground: 220 25% 6%;
-    --accent-muted: 45 60% 25%;
+    --accent-muted: 25 60% 25%;
 
     --destructive: 0 75% 65%;
     --destructive-foreground: 220 10% 95%;
@@ -116,7 +116,7 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(220 85% 65%), hsl(220 90% 75%));
     --gradient-hero: linear-gradient(135deg, hsl(220 25% 4%) 0%, hsl(220 25% 8%) 50%, hsl(220 20% 12%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(220 20% 8%), hsl(220 15% 10%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 95% 70%), hsl(40 90% 75%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 60%), hsl(20 90% 65%));
     --gradient-surface: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 15% 6%));
     
     /* Dark mode shadows */
@@ -124,7 +124,7 @@ All colors MUST be HSL.
     --shadow-card: 0 4px 25px -4px hsl(220 25% 0% / 0.3), 0 2px 8px -2px hsl(220 25% 0% / 0.1);
     --shadow-hero: 0 25px 80px -15px hsl(220 85% 65% / 0.15);
     --shadow-glow: 0 0 40px hsl(220 85% 65% / 0.1);
-    --shadow-accent: 0 10px 30px -5px hsl(45 95% 70% / 0.1);
+    --shadow-accent: 0 10px 30px -5px hsl(25 95% 60% / 0.1);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -276,7 +276,7 @@ All colors MUST be HSL.
 
   .apple-glow-hero {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--accent)), hsl(40 90% 65%));
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(20 90% 60%));
     box-shadow: 
       0 0 30px hsl(var(--accent) / 0.5),
       0 0 60px hsl(var(--accent) / 0.3),
@@ -291,7 +291,7 @@ All colors MUST be HSL.
     inset: -3px;
     background: linear-gradient(45deg, 
       hsl(var(--accent)),
-      hsl(40 95% 70%),
+      hsl(20 95% 65%),
       hsl(var(--primary-glow)),
       hsl(var(--accent))
     );
