@@ -7,6 +7,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Navigate } from "react-router-dom";
 import ContentManager from "@/components/admin/ContentManager";
 import UserManager from "@/components/admin/UserManager";
+import PageManager from "@/components/admin/PageManager";
+import ContentPreview from "@/components/admin/ContentPreview";
 
 const Admin = () => {
   const [user, setUser] = useState<any>(null);
@@ -111,13 +113,23 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="content" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="content">Content Management</TabsTrigger>
+            <TabsTrigger value="pages">Page Management</TabsTrigger>
+            <TabsTrigger value="preview">Content Preview</TabsTrigger>
             <TabsTrigger value="users">User Management</TabsTrigger>
           </TabsList>
 
           <TabsContent value="content">
             <ContentManager />
+          </TabsContent>
+
+          <TabsContent value="pages">
+            <PageManager />
+          </TabsContent>
+
+          <TabsContent value="preview">
+            <ContentPreview />
           </TabsContent>
 
           <TabsContent value="users">

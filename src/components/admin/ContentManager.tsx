@@ -5,8 +5,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Pencil, Save, X } from "lucide-react";
+import { Pencil, Save, X, Plus } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface ContentItem {
   id: string;
@@ -25,8 +34,15 @@ const ContentManager = () => {
   const [content, setContent] = useState<ContentItem[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editForm, setEditForm] = useState<Partial<ContentItem>>({});
+  const [newContentForm, setNewContentForm] = useState<Partial<ContentItem>>({});
   const [loading, setLoading] = useState(true);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const { toast } = useToast();
+
+  const contentTypes = [
+    'hero', 'about', 'services', 'contact', 'testimonial', 
+    'page_hero', 'page_content', 'page_meta'
+  ];
 
   useEffect(() => {
     fetchContent();
@@ -109,6 +125,68 @@ const ContentManager = () => {
     }));
   };
 
+  const createNewContent = async () => {
+    if (!newContentForm.content_type) {
+      toast({
+        title: "Error",
+        description: "Content type is required",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const { error } = await supabase
+      .from('website_content')
+      .insert({
+        content_type: newContentForm.content_type as any,
+        title: newContentForm.title || '',
+        subtitle: newContentForm.subtitle || '',
+        description: newContentForm.description || '',
+        image_url: newContentForm.image_url || '',
+        button_text: newContentForm.button_text || '',
+        button_url: newContentForm.button_url || '',
+        additional_data: newContentForm.additional_data || {},
+        is_active: newContentForm.is_active ?? true
+      });
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to create content",
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: "Content created successfully",
+      });
+      fetchContent();
+      setNewContentForm({});
+      setIsDialogOpen(false);
+    }
+  };
+
+  const toggleContentStatus = async (id: string, isActive: boolean) => {
+    const { error } = await supabase
+      .from('website_content')
+      .update({ is_active: !isActive })
+      .eq('id', id);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to update content status",
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: `Content ${!isActive ? 'activated' : 'deactivated'} successfully`,
+      });
+      fetchContent();
+    }
+  };
+
   if (loading) {
     return <div className="text-center py-8">Loading content...</div>;
   }
@@ -117,6 +195,104 @@ const ContentManager = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold">Content Management</h2>
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+          <DialogTrigger asChild>
+            <Button>
+              <Plus className="w-4 h-4 mr-1" />
+              Add New Content
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="max-w-2xl">
+            <DialogHeader>
+              <DialogTitle>Create New Content</DialogTitle>
+            </DialogHeader>
+            <div className="grid gap-4 py-4 max-h-96 overflow-y-auto">
+              <div>
+                <Label htmlFor="new-content-type">Content Type</Label>
+                <Select
+                  value={newContentForm.content_type || ''}
+                  onValueChange={(value) => setNewContentForm(prev => ({ ...prev, content_type: value }))}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select content type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {contentTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {type.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <Label htmlFor="new-title">Title</Label>
+                <Input
+                  id="new-title"
+                  value={newContentForm.title || ''}
+                  onChange={(e) => setNewContentForm(prev => ({ ...prev, title: e.target.value }))}
+                />
+              </div>
+              <div>
+                <Label htmlFor="new-subtitle">Subtitle</Label>
+                <Input
+                  id="new-subtitle"
+                  value={newContentForm.subtitle || ''}
+                  onChange={(e) => setNewContentForm(prev => ({ ...prev, subtitle: e.target.value }))}
+                />
+              </div>
+              <div>
+                <Label htmlFor="new-description">Description</Label>
+                <Textarea
+                  id="new-description"
+                  value={newContentForm.description || ''}
+                  onChange={(e) => setNewContentForm(prev => ({ ...prev, description: e.target.value }))}
+                  rows={3}
+                />
+              </div>
+              <div>
+                <Label htmlFor="new-image-url">Image URL</Label>
+                <Input
+                  id="new-image-url"
+                  value={newContentForm.image_url || ''}
+                  onChange={(e) => setNewContentForm(prev => ({ ...prev, image_url: e.target.value }))}
+                />
+              </div>
+              <div>
+                <Label htmlFor="new-button-text">Button Text</Label>
+                <Input
+                  id="new-button-text"
+                  value={newContentForm.button_text || ''}
+                  onChange={(e) => setNewContentForm(prev => ({ ...prev, button_text: e.target.value }))}
+                />
+              </div>
+              <div>
+                <Label htmlFor="new-button-url">Button URL</Label>
+                <Input
+                  id="new-button-url"
+                  value={newContentForm.button_url || ''}
+                  onChange={(e) => setNewContentForm(prev => ({ ...prev, button_url: e.target.value }))}
+                />
+              </div>
+              <div className="flex items-center space-x-2">
+                <Switch
+                  id="new-is-active"
+                  checked={newContentForm.is_active ?? true}
+                  onCheckedChange={(checked) => setNewContentForm(prev => ({ ...prev, is_active: checked }))}
+                />
+                <Label htmlFor="new-is-active">Active</Label>
+              </div>
+            </div>
+            <div className="flex justify-end gap-2">
+              <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
+                Cancel
+              </Button>
+              <Button onClick={createNewContent}>
+                Create Content
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
 
       <div className="grid gap-6">
@@ -124,8 +300,20 @@ const ContentManager = () => {
           <Card key={item.id}>
             <CardHeader>
               <div className="flex justify-between items-center">
-                <CardTitle className="capitalize">{item.content_type} Section</CardTitle>
+                <div className="flex items-center gap-2">
+                  <CardTitle className="capitalize">{item.content_type.replace('_', ' ')} Section</CardTitle>
+                  <span className={`px-2 py-1 rounded-full text-xs ${item.is_active ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}`}>
+                    {item.is_active ? 'Active' : 'Inactive'}
+                  </span>
+                </div>
                 <div className="flex gap-2">
+                  <Button
+                    onClick={() => toggleContentStatus(item.id, item.is_active)}
+                    variant="outline"
+                    size="sm"
+                  >
+                    {item.is_active ? 'Deactivate' : 'Activate'}
+                  </Button>
                   {editingId === item.id ? (
                     <>
                       <Button 
