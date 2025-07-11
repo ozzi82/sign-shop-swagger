@@ -9,6 +9,7 @@ import ContentManager from "@/components/admin/ContentManager";
 import UserManager from "@/components/admin/UserManager";
 import PageManager from "@/components/admin/PageManager";
 import ContentPreview from "@/components/admin/ContentPreview";
+import WebsiteEditor from "@/components/admin/WebsiteEditor";
 
 const Admin = () => {
   const [user, setUser] = useState<any>(null);
@@ -112,13 +113,18 @@ const Admin = () => {
           </div>
         </div>
 
-        <Tabs defaultValue="content" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4">
+        <Tabs defaultValue="editor" className="space-y-6">
+          <TabsList className="grid w-full grid-cols-5">
+            <TabsTrigger value="editor">Website Editor</TabsTrigger>
             <TabsTrigger value="content">Content Management</TabsTrigger>
             <TabsTrigger value="pages">Page Management</TabsTrigger>
             <TabsTrigger value="preview">Content Preview</TabsTrigger>
             <TabsTrigger value="users">User Management</TabsTrigger>
           </TabsList>
+
+          <TabsContent value="editor">
+            <WebsiteEditor />
+          </TabsContent>
 
           <TabsContent value="content">
             <ContentManager />
