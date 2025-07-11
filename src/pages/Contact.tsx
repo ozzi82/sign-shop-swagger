@@ -103,15 +103,19 @@ const Contact = () => {
                           <p className="text-foreground font-medium">
                             {method.primary}
                           </p>
-                          <p className="text-muted-foreground text-sm mb-2">
-                            {method.secondary}
-                          </p>
+                          {method.secondary && (
+                            <p className="text-muted-foreground text-sm mb-2">
+                              {method.secondary}
+                            </p>
+                          )}
                           <p className="text-sm text-muted-foreground mb-1">
                             {method.description}
                           </p>
-                          <p className="text-xs text-muted-foreground/80">
-                            {method.hours}
-                          </p>
+                          {method.hours && (
+                            <p className="text-xs text-muted-foreground/80">
+                              {method.hours}
+                            </p>
+                          )}
                         </div>
                       </div>
                     </CardContent>
