@@ -39,27 +39,33 @@ const ProductsGrid = () => {
     {
       id: "edgeluxe-lp31-32",
       image: haloLettersImage,
-      title: "Edgeluxe LP 3.1/3.2",
+      title: "EdgeLuxe LP 3.1/3.2",
       description:
-        "Fabricated Stainless Steel with standoffs for halo-lit effects",
+        "Fabricated Stainless Steel with standoffs (LP 3.1) or flush-mount (LP 3.2) halo effects",
       features: [
-        "Halo illuminated from the back with standoff spacers",
+        "LP 3.1: Halo illuminated from the back with standoff spacers",
+        "LP 3.2: Partial side-lit, flush-mounted halo effect",
         "LEDs arranged to avoid reflection of diodes on mounting surface",
-        "Painted in any PMS color",
-        "Multiple depth options",
-        "Serviceable LEDs",
-        "IP67 waterproofing",
+        "Painted in any PMS color with colorful halo effect options",
+        "Vinyls or pigmented translucent acrylics for colorful halo effects",
+        "Serviceable LEDs for easy maintenance",
+        "3-year warranty included",
+        "UL Listed certification",
       ],
-      badges: ["Premium"],
+      badges: ["Premium", "UL Listed", "3 Year Warranty"],
       specifications: {
         Materials: "Fabricated Stainless Steel",
         Illumination:
-          "Halo from back with standoffs (LP 3.1) / Flush-mount halo (LP 3.2)",
+          "LP 3.1: Halo from back with standoffs / LP 3.2: Flush-mount halo",
         Depths: '30mm (1.2"), 50mm (2"), 80mm (3.1"), 100mm (3.9")',
         Customization:
-          "Any PMS color, vinyls or pigmented translucent acrylics",
-        "Stroke Width": 'Minimum 15mm (0.6")',
+          "Any PMS color, vinyls or pigmented translucent acrylics for colorful halo effects",
+        "Stroke Width":
+          'Minimum 15mm (0.6") for stability and even illumination',
         "Minimum Height": '50mm (2")',
+        Maintenance: "Serviceable LEDs",
+        Warranty: "3 years",
+        Certification: "UL Listed",
       },
     },
     {
