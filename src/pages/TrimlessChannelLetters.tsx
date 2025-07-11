@@ -46,11 +46,11 @@ const TrimlessChannelLetters = () => {
     "description": "UL-listed trimless channel letters with flush-face design, no visible seams. Made for sign companies.",
     "brand": {
       "@type": "Brand",
-      "name": "ProSign Manufacturing"
+      "name": "Sunlite Signs"
     },
     "manufacturer": {
       "@type": "Organization", 
-      "name": "ProSign Manufacturing"
+      "name": "Sunlite Signs"
     },
     "material": "Aluminum and Acrylic",
     "additionalProperty": [

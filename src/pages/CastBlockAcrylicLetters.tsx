@@ -52,11 +52,11 @@ const CastBlockAcrylicLetters = () => {
     "description": "Premium thick-cast acrylic letters with precision CNC cutting. Comparable quality to Bitro Resno with faster delivery.",
     "brand": {
       "@type": "Brand", 
-      "name": "ProSign Manufacturing"
+      "name": "Sunlite Signs"
     },
     "manufacturer": {
       "@type": "Organization",
-      "name": "ProSign Manufacturing"
+      "name": "Sunlite Signs"
     },
     "material": "Cast Cell Acrylic",
     "additionalProperty": [

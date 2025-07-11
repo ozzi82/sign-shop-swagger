@@ -70,7 +70,7 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Founded in 1999, ProSign Manufacturing began as a small fabrication shop with a simple mission: 
+                Founded in 1999, Sunlite Signs began as a small fabrication shop with a simple mission: 
                 create the highest quality channel letters and signage products for the sign industry.
               </p>
               <p className="text-lg text-muted-foreground mb-6">

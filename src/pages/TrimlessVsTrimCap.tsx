@@ -65,7 +65,7 @@ const TrimlessVsTrimCap = () => {
       "headline": "Trimless vs Trim-Cap Channel Letters: Which is Better?",
       "author": {
         "@type": "Organization",
-        "name": "ProSign Manufacturing"
+        "name": "Sunlite Signs"
       }
     }
   };

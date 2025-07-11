@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="text-2xl font-bold mb-4 bg-inherit">
-              ProSign Manufacturing
+              Sunlite Signs
             </div>
             <p className="text-primary-foreground/80 mb-6">
               Wholesale manufacturer of premium channel letters and acrylic signage for sign companies across USA and Canada.
@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-              © 2024 ProSign Manufacturing. All rights reserved. Wholesale supplier to the sign industry.
+              © 2024 Sunlite Signs LLC. All rights reserved. Wholesale supplier to the sign industry.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy" className="text-primary-foreground/60 hover:text-accent transition-colors">
