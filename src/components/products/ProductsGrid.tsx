@@ -340,6 +340,75 @@ const ProductsGrid = () => {
       },
     },
     {
+      id: "edgeluxe-lp11s",
+      image: edgeluxeLettersImage,
+      title: "EdgeLuxe LP 11-S",
+      description: "Block Acrylic Full Side-lit illumination",
+      features: [
+        '30mm (1.2") cast block acrylic construction',
+        "Embedded LEDs for uniform full side-lit illumination",
+        'Standard 30mm (1.2") depth for durability and optimal light diffusion',
+        "Painted in any PMS color with color matching options",
+        "Vinyls or pigmented translucent acrylics for colorful face-lit effects",
+        'Minimum 12mm (0.47") stroke width for stability and even illumination',
+        "Epoxy-sealed for IP67 waterproofing and heat dissipation",
+        "IP67 water and dust-proof, no maintenance required",
+        "3-year warranty included",
+        "UL Listed certification",
+      ],
+      badges: ["Premium", "UL Listed", "3 Year Warranty"],
+      specifications: {
+        Materials: '30mm (1.2") cast block acrylic',
+        Illumination: "Embedded LEDs for uniform full side-lit",
+        Depth:
+          'Standard 30mm (1.2") for durability and optimal light diffusion',
+        Customization:
+          "Painted in any PMS color with color matching options for vinyls or pigmented translucent acrylics for colorful face-lit effects",
+        "Stroke Width":
+          'Minimum 12mm (0.47") for stability and even illumination',
+        "Minimum Height": '50mm (2")',
+        Sealing: "Epoxy-sealed for IP67 waterproofing and heat dissipation",
+        Maintenance: "IP67 water and dust-proof, no maintenance",
+        Warranty: "3 years",
+        Certification: "UL Listed",
+      },
+    },
+    {
+      id: "edgeluxe-lp11n",
+      image: edgeluxeLettersImage,
+      title: "EdgeLuxe LP 11-N",
+      description: "Block Acrylic Faux Neon effect illumination",
+      features: [
+        '30mm (1.2") cast block acrylic construction',
+        "Embedded LEDs for uniform face-lit, creating neon glass tube effect",
+        'Standard 30mm (1.2") depth for durability and optimal light diffusion',
+        "Painted in any PMS color with color matching options",
+        "Vinyls or pigmented translucent acrylics for colorful face-lit effects",
+        'Minimum 12mm (0.47") stroke width for stability and even illumination',
+        "Epoxy-sealed for IP67 waterproofing and heat dissipation",
+        "IP67 water and dust-proof, no maintenance required",
+        "3-year warranty included",
+        "UL Listed certification",
+      ],
+      badges: ["Premium", "UL Listed", "3 Year Warranty"],
+      specifications: {
+        Materials: '30mm (1.2") cast block acrylic',
+        Illumination:
+          "Embedded LEDs for uniform face-lit, creating neon glass tube effect",
+        Depth:
+          'Standard 30mm (1.2") for durability and optimal light diffusion',
+        Customization:
+          "Painted in any PMS color with color matching options for vinyls or pigmented translucent acrylics for colorful face-lit effects",
+        "Stroke Width":
+          'Minimum 12mm (0.47") for stability and even illumination',
+        "Minimum Height": '50mm (2")',
+        Sealing: "Epoxy-sealed for IP67 waterproofing and heat dissipation",
+        Maintenance: "IP67 water and dust-proof, no maintenance",
+        Warranty: "3 years",
+        Certification: "UL Listed",
+      },
+    },
+    {
       id: "edgeluxe-lp2",
       image: trimlessLettersImage,
       title: "Edgeluxe LP 2",
