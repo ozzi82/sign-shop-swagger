@@ -14,26 +14,34 @@ const ProductsGrid = () => {
     {
       id: "edgeluxe-lp5",
       image: trimlessLettersImage,
-      title: "Edgeluxe LP 5",
+      title: "EdgeLuxe LP 5",
       description:
         "Trimless Fabricated Stainless Steel Letters with face-lit illumination",
       features: [
         "Thick gauge stainless steel returns and back welded together",
-        "Step-router acrylic face, trim-less",
-        "Face-lit illumination",
-        "Painted in any PMS color",
-        "Minimum 15mm stroke width for stability",
-        "Serviceable LEDs",
+        "Step-router acrylic face, trim-less design",
+        "Face-lit LED illumination for even distribution",
+        "Painted in any PMS color with color matching options",
+        "Vinyls or pigmented translucent acrylics for colorful face-lit effects",
+        'Minimum 15mm (0.6") stroke width for stability and even illumination',
+        "Serviceable LEDs for easy maintenance",
+        "3-year warranty included",
+        "UL Listed certification",
       ],
-      badges: ["Best Seller", "Premium"],
+      badges: ["Best Seller", "Premium", "UL Listed", "3 Year Warranty"],
       specifications: {
-        Materials: "Thick gauge stainless steel",
+        Materials:
+          "Thick gauge stainless steel returns and back welded together, step-router acrylic face trim-less",
         Illumination: "Face-lit",
         Depths: '30mm (1.2"), 50mm (2"), 80mm (3.1"), 100mm (3.9")',
         Customization:
-          "Any PMS color, vinyls or pigmented translucent acrylics",
-        "Stroke Width": 'Minimum 15mm (0.6")',
+          "Painted in any PMS color with color matching options for vinyls or pigmented translucent acrylics for colorful face-lit effects",
+        "Stroke Width":
+          'Minimum 15mm (0.6") for stability and even illumination',
         "Minimum Height": '50mm (2")',
+        Maintenance: "Serviceable LEDs",
+        Warranty: "3 years",
+        Certification: "UL Listed",
       },
     },
     {
