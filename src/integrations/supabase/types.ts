@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      pages: {
+        Row: {
+          created_at: string
+          id: string
+          is_active: boolean
+          meta_description: string | null
+          meta_keywords: string | null
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          meta_description?: string | null
+          meta_keywords?: string | null
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          meta_description?: string | null
+          meta_keywords?: string | null
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -95,7 +128,14 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "user"
-      content_type: "hero" | "about" | "features" | "testimonials"
+      content_type:
+        | "hero"
+        | "about"
+        | "features"
+        | "testimonials"
+        | "page_hero"
+        | "page_content"
+        | "page_meta"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -224,7 +264,15 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
-      content_type: ["hero", "about", "features", "testimonials"],
+      content_type: [
+        "hero",
+        "about",
+        "features",
+        "testimonials",
+        "page_hero",
+        "page_content",
+        "page_meta",
+      ],
     },
   },
 } as const
