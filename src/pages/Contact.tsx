@@ -17,35 +17,19 @@ const Contact = () => {
   const contactMethods = [
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Phone Orders",
-      primary: "1-800-PRO-SIGN",
-      secondary: "(555) 123-4567",
+      title: "Get In Touch with our Team",
+      primary: "WEST: +1 123 4455 Mr. Kenan Hanhan",
+      secondary: "EAST: +1 123 4455 Mr. Ozan Yilmaz",
       description: "Speak directly with our sales team",
       hours: "Mon-Fri: 7:00 AM - 6:00 PM EST",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Quotes",
-      primary: "orders@prosignmfg.com",
-      secondary: "quotes@prosignmfg.com",
+      primary: "hello@sunlitesigns.com",
+      secondary: "",
       description: "Send detailed specifications for pricing",
-      hours: "Response within 2 hours",
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Manufacturing Facility",
-      primary: "2200 Industrial Parkway",
-      secondary: "Manufacturing City, ST 54321",
-      description: "Visit our showroom by appointment",
-      hours: "Tours available Mon-Thu",
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Rush Orders",
-      primary: "24/7 Emergency Line",
-      secondary: "(555) 911-RUSH",
-      description: "For urgent project needs",
-      hours: "Additional fees apply",
+      hours: "",
     },
   ];
 
