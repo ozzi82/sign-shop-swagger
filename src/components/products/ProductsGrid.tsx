@@ -37,14 +37,13 @@ const ProductsGrid = () => {
       },
     },
     {
-      id: "edgeluxe-lp31-32",
+      id: "edgeluxe-lp31",
       image: haloLettersImage,
-      title: "EdgeLuxe LP 3.1/3.2",
+      title: "EdgeLuxe LP 3.1",
       description:
-        "Fabricated Stainless Steel with standoffs (LP 3.1) or flush-mount (LP 3.2) halo effects",
+        "Fabricated Stainless Steel with standoffs for halo-lit effects",
       features: [
-        "LP 3.1: Halo illuminated from the back with standoff spacers",
-        "LP 3.2: Partial side-lit, flush-mounted halo effect",
+        "Halo illuminated from the back with standoff spacers",
         "LEDs arranged to avoid reflection of diodes on mounting surface",
         "Painted in any PMS color with colorful halo effect options",
         "Vinyls or pigmented translucent acrylics for colorful halo effects",
@@ -55,8 +54,37 @@ const ProductsGrid = () => {
       badges: ["Premium", "UL Listed", "3 Year Warranty"],
       specifications: {
         Materials: "Fabricated Stainless Steel",
-        Illumination:
-          "LP 3.1: Halo from back with standoffs / LP 3.2: Flush-mount halo",
+        Illumination: "Halo from back with standoffs",
+        Depths: '30mm (1.2"), 50mm (2"), 80mm (3.1"), 100mm (3.9")',
+        Customization:
+          "Any PMS color, vinyls or pigmented translucent acrylics for colorful halo effects",
+        "Stroke Width":
+          'Minimum 15mm (0.6") for stability and even illumination',
+        "Minimum Height": '50mm (2")',
+        Maintenance: "Serviceable LEDs",
+        Warranty: "3 years",
+        Certification: "UL Listed",
+      },
+    },
+    {
+      id: "edgeluxe-lp32",
+      image: haloLettersImage,
+      title: "EdgeLuxe LP 3.2",
+      description:
+        "Fabricated Stainless Steel flush-mount with partial side-lit halo effect",
+      features: [
+        "Partial side-lit, flush-mounted halo effect",
+        "LEDs arranged to avoid reflection of diodes on mounting surface",
+        "Painted in any PMS color with colorful halo effect options",
+        "Vinyls or pigmented translucent acrylics for colorful halo effects",
+        "Serviceable LEDs for easy maintenance",
+        "3-year warranty included",
+        "UL Listed certification",
+      ],
+      badges: ["Premium", "UL Listed", "3 Year Warranty"],
+      specifications: {
+        Materials: "Fabricated Stainless Steel",
+        Illumination: "Flush-mount partial side-lit halo",
         Depths: '30mm (1.2"), 50mm (2"), 80mm (3.1"), 100mm (3.9")',
         Customization:
           "Any PMS color, vinyls or pigmented translucent acrylics for colorful halo effects",
