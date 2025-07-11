@@ -58,7 +58,7 @@ interface HeroProps {
 
 const Hero = ({ data, query, variables }: HeroProps = {}) => {
   const [content, setContent] = useState<HeroContent | null>(null);
-  
+
   // Use Tina if data is available, otherwise fallback to Supabase
   const tinaProps = data ? { data, query, variables } : null;
   const { data: tinaData } = tinaProps ? useTina(tinaProps) : { data: null };
@@ -101,7 +101,8 @@ const Hero = ({ data, query, variables }: HeroProps = {}) => {
             image_url: data.image_url,
             button_text: data.button_text,
             button_url: data.button_url,
-            additional_data: data.additional_data as HeroContent["additional_data"],
+            additional_data:
+              data.additional_data as HeroContent["additional_data"],
           });
         } else {
           console.error("Error fetching hero content:", error);
@@ -168,7 +169,7 @@ const Hero = ({ data, query, variables }: HeroProps = {}) => {
 
       {/* Foreground content aligned to right */}
       <div className="container mx-auto px-6 relative z-10 flex justify-end items-center min-h-screen">
-        <div className="bg-background/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl p-6 md:p-10 max-w-xl w-full mr-0 lg:mr-12">
+        <div className="bg-background/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl p-6 md:p-10 max-w-xl w-full m-5 mr-12">
           <div className="animate-fade-in">
             <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
               {content.title}
