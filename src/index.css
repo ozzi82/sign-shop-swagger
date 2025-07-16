@@ -494,7 +494,7 @@ All colors MUST be HSL.
   .hubspot-form-wrapper .hbspt-form .hs-form-field label,
   #hubspot-form-container label,
   #hubspot-form-container .hs-form-field label {
-    color: hsl(220 15% 12%) !important;
+    color: hsl(var(--foreground)) !important;
     font-weight: 500 !important;
     font-size: 14px !important;
     margin-bottom: 8px !important;
