@@ -5,6 +5,34 @@ import { Phone, Mail, MapPin, Clock, FileText, Calculator } from "lucide-react";
 import { useEffect } from "react";
 
 const Contact = () => {
+  // Load HubSpot form script
+  useEffect(() => {
+    // Create and load the HubSpot forms script
+    const script = document.createElement("script");
+    script.src = "//js.hsforms.net/forms/embed/v2.js";
+    script.charset = "utf-8";
+    script.type = "text/javascript";
+    script.onload = () => {
+      // Create the form once the script is loaded
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "47141522",
+          formId: "02a5f813-b959-4141-bd1e-28edc296de68",
+          region: "na1",
+          target: "#hubspot-form-container",
+        });
+      }
+    };
+    document.head.appendChild(script);
+
+    // Cleanup function
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
+
   const contactMethods = [
     {
       icon: <Phone className="w-6 h-6" />,
