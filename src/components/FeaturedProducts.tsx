@@ -210,7 +210,7 @@ const FeaturedProducts = () => {
             asChild
           >
             <Link to="/products">
-              View Complete Product Catalog
+              <p>View Our Sunlite Signs Signage Selection Guide</p>
               <ArrowRight className="ml-3" />
             </Link>
           </Button>
