@@ -486,4 +486,20 @@ All colors MUST be HSL.
     background-size: 16px !important;
     padding-right: 40px !important;
   }
+
+  /* Stronger override for HubSpot labels to ensure visibility */
+  .hubspot-form-wrapper label,
+  .hubspot-form-wrapper .hs-form-field label,
+  .hubspot-form-wrapper .hbspt-form label,
+  .hubspot-form-wrapper .hbspt-form .hs-form-field label,
+  #hubspot-form-container label,
+  #hubspot-form-container .hs-form-field label {
+    color: hsl(220 15% 12%) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
 }
