@@ -28,7 +28,6 @@ const FeaturedProducts = () => {
         "Custom fonts and sizes",
         "3-year comprehensive warranty",
       ],
-      badges: ["Most Popular", "Premium"],
       highlight: true,
       price: "Starting at $24/letter",
     },
