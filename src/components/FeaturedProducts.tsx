@@ -94,18 +94,6 @@ const FeaturedProducts = () => {
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
                   <div className="flex-1">
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      {product.badges.map((badge, idx) => (
-                        <Badge
-                          key={idx}
-                          variant={
-                            badge === "Most Popular" ? "default" : "secondary"
-                          }
-                        >
-                          {badge}
-                        </Badge>
-                      ))}
-                    </div>
                     <CardTitle className="text-2xl font-semibold text-foreground">
                       {product.title}
                     </CardTitle>
