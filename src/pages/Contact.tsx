@@ -189,9 +189,13 @@ const Contact = () => {
                   className="hubspot-form-wrapper"
                   style={{
                     minHeight: "400px",
+                    backgroundColor: "#ffffff",
+                    padding: "24px",
+                    borderRadius: "8px",
+                    border: "1px solid hsl(var(--border))",
                   }}
                 >
-                  <div className="text-center text-muted-foreground py-8">
+                  <div className="text-center text-gray-600 py-8">
                     Loading form...
                   </div>
                 </div>
