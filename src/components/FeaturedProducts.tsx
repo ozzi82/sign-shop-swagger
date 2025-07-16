@@ -44,7 +44,6 @@ const FeaturedProducts = () => {
         "Warm LED backlighting",
         "Architectural quality finish",
       ],
-      badges: ["Fast Ship"],
     },
   ];
   return (
