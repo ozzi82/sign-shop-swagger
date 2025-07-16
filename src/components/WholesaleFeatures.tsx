@@ -39,7 +39,7 @@ const WholesaleFeatures = () => {
     },
     {
       icon: <Scissors className="w-8 h-8" />,
-      title: "Flat Cut Metal Letters",
+      title: "Edgeluxe Flat Cut Metal Letters",
       description:
         "Precision laser cut aluminum and stainless steel letters with powder coat or brushed finishes.",
       benefits: [
