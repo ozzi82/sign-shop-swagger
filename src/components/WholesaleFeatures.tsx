@@ -13,7 +13,7 @@ const WholesaleFeatures = () => {
   const features = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Trimless Channel Letters",
+      title: "Edgeluxe Trimless Channel Letters",
       description:
         "True trimless flush-face design with no visible trim lines - superior to traditional channel letters and competitive with quality.",
       benefits: [
