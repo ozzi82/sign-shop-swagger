@@ -168,7 +168,16 @@ const Hero = ({ data, query, variables }: HeroProps = {}) => {
       </div>
 
       {/* Foreground content aligned to right */}
-      <div className="container mx-auto px-6 relative z-10 flex justify-end items-center min-h-screen">
+      <div
+        className="container mx-auto px-6 relative z-10 flex justify-end items-center min-h-screen"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2Fe5c2838603454a6598f9091d044befd7)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="bg-background/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl p-6 md:p-10 max-w-xl w-full m-5 mr-12">
           <div className="animate-fade-in">
             <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
