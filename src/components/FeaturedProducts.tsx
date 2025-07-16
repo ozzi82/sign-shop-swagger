@@ -79,7 +79,9 @@ const FeaturedProducts = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   style={{
                     backgroundImage:
-                      "url(https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2Fd9657f0406e64cb4a79cc1ce8cf8e68f)",
+                      index === 0
+                        ? "url(https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2Fd9657f0406e64cb4a79cc1ce8cf8e68f)"
+                        : "url(https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2Fdc7335d63a994993b10b147eb551d888)",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
