@@ -172,7 +172,7 @@ const Contact = () => {
               </Card>
             </div>
 
-            {/* Quote Request Form */}
+            {/* HubSpot Quote Request Form */}
             <Card className="bg-card shadow-card border-border">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-foreground">
@@ -183,129 +183,23 @@ const Contact = () => {
                   hours during business hours.
                 </p>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Company Name *
-                    </label>
-                    <Input placeholder="ABC Sign Company" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Contact Name *
-                    </label>
-                    <Input placeholder="John Smith" />
+              <CardContent>
+                <div
+                  id="hubspot-form-container"
+                  className="hubspot-form-wrapper"
+                  style={{
+                    minHeight: "400px",
+                  }}
+                >
+                  <div className="text-center text-muted-foreground py-8">
+                    Loading form...
                   </div>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Email *
-                    </label>
-                    <Input type="email" placeholder="john@abcsigns.com" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Phone *
-                    </label>
-                    <Input type="tel" placeholder="(555) 123-4567" />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Product Type *
-                  </label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select product type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="trimless-channel">
-                        Trimless Channel Letters
-                      </SelectItem>
-                      <SelectItem value="cast-acrylic">
-                        Cast Block Acrylic Letters
-                      </SelectItem>
-                      <SelectItem value="flat-cut">
-                        Flat Cut Metal Letters
-                      </SelectItem>
-                      <SelectItem value="backlit">
-                        Backlit/Halo Letters
-                      </SelectItem>
-                      <SelectItem value="custom">Custom Fabrication</SelectItem>
-                      <SelectItem value="multiple">
-                        Multiple Products
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Project Timeline
-                    </label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="When do you need this?" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="asap">
-                          ASAP (Rush charges apply)
-                        </SelectItem>
-                        <SelectItem value="1-week">Within 1 week</SelectItem>
-                        <SelectItem value="2-weeks">Within 2 weeks</SelectItem>
-                        <SelectItem value="1-month">Within 1 month</SelectItem>
-                        <SelectItem value="flexible">
-                          Flexible timeline
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Estimated Budget Range
-                    </label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select budget range" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="under-1k">Under $1,000</SelectItem>
-                        <SelectItem value="1k-5k">$1,000 - $5,000</SelectItem>
-                        <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                        <SelectItem value="10k-25k">
-                          $10,000 - $25,000
-                        </SelectItem>
-                        <SelectItem value="over-25k">Over $25,000</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Project Specifications *
-                  </label>
-                  <Textarea
-                    placeholder="Please provide details including:&#10;• Letter text/content&#10;• Approximate dimensions&#10;• Mounting requirements&#10;• Special features or finishes&#10;• Quantity if multiple sets&#10;• Any reference images or drawings"
-                    rows={6}
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <Button variant="cta" size="lg" className="w-full">
-                    Submit Quote Request
-                  </Button>
-                  <p className="text-xs text-muted-foreground text-center">
-                    * By submitting this form, you agree to receive
-                    communications about your quote request. We typically
-                    respond within 2 hours during business hours.
-                  </p>
-                </div>
+                <p className="text-xs text-muted-foreground text-center mt-4">
+                  * By submitting this form, you agree to receive communications
+                  about your quote request. We typically respond within 2 hours
+                  during business hours.
+                </p>
               </CardContent>
             </Card>
           </div>
