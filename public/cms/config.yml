@@ -1,10 +1,7 @@
 backend:
-  name: github
-  repo: ozzi82/sign-shop-swagger
+  name: git-gateway
   branch: main
-  base_url: https://sign-shop-swagger.vercel.app
-  auth_endpoint: /api/auth
-  site_domain: sign-shop-swagger.vercel.app
+
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
