@@ -172,7 +172,7 @@ const Hero = ({ data, query, variables }: HeroProps = {}) => {
         className="container mx-auto px-6 relative z-10 flex justify-end items-center min-h-screen"
         style={{
           backgroundImage:
-            "url(https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2Fe5c2838603454a6598f9091d044befd7)",
+            "url(https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2F106d1b9959194de5ac8f6e474874f43b)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
