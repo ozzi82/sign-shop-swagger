@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -21,21 +27,21 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <Card className="bg-gradient-card shadow-card hover:shadow-hero transition-all duration-300 border-border overflow-hidden">
       {product.image && (
         <div className="aspect-video overflow-hidden">
-          <img 
-            src={product.image} 
-            alt={product.title} 
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
         </div>
       )}
-      
+
       <CardHeader>
         <div className="flex justify-between items-start mb-2">
           <div className="flex-1">
             <div className="flex flex-wrap gap-2 mb-2">
               {product.badges.map((badge, idx) => (
-                <Badge 
-                  key={idx} 
+                <Badge
+                  key={idx}
                   variant={badge === "Best Seller" ? "default" : "secondary"}
                 >
                   {badge}
@@ -53,27 +59,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </CardHeader>
 
       <CardContent className="space-y-6">
-        {/* Features */}
-        <div>
-          <h4 className="font-semibold text-foreground mb-3">Key Features</h4>
-          <div className="grid grid-cols-1 gap-2">
-            {product.features.map((feature, idx) => (
-              <div key={idx} className="text-sm text-muted-foreground flex items-start">
-                <CheckCircle className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                {feature}
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Specifications */}
         <div>
           <h4 className="font-semibold text-foreground mb-3">Specifications</h4>
-          <div className="space-y-2">
+          <div className="grid grid-cols-1 gap-2">
             {Object.entries(product.specifications).map(([key, value], idx) => (
-              <div key={idx} className="flex justify-between text-sm">
-                <span className="text-muted-foreground">{key}:</span>
-                <span className="text-foreground font-medium">{value}</span>
+              <div
+                key={idx}
+                className="text-sm text-muted-foreground flex items-start"
+              >
+                <CheckCircle className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                <span>
+                  <span className="font-medium">{key}:</span> {value}
+                </span>
               </div>
             ))}
           </div>
