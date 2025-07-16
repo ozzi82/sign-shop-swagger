@@ -10,9 +10,9 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Clock } from "lucide-react";
 const plazaLettersImage =
-  "/lovable-uploads/04527713-5a62-42a7-8c53-a76cc1d16206.png";
+  "https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2F2f66ed09023d40b3b70fa7bf13e196fc";
 const haloLettersImage =
-  "/lovable-uploads/4ab12be9-9199-4263-b08b-208aab0968ee.png";
+  "https://cdn.builder.io/api/v1/image/assets%2F91c68b23f3a04bf5a94564bf5338d5e4%2Fd9657f0406e64cb4a79cc1ce8cf8e68f";
 const FeaturedProducts = () => {
   const featuredProducts = [
     {
