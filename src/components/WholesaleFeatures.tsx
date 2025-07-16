@@ -52,7 +52,7 @@ const WholesaleFeatures = () => {
     },
     {
       icon: <Wrench className="w-8 h-8" />,
-      title: "Custom Metal Fabrication",
+      title: "Edgeluxe Custom Metal Fabrication",
       description:
         "Complete custom fabrication services for unique signage projects and special requirements.",
       benefits: [
