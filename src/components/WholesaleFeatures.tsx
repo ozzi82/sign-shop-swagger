@@ -26,7 +26,7 @@ const WholesaleFeatures = () => {
     },
     {
       icon: <Layers className="w-8 h-8" />,
-      title: "Cast Block Acrylic Letters",
+      title: "Edgeluxe Cast Block Acrylic Letters",
       description:
         "Premium thick-cast acrylic letters with precision CNC cutting with superior quality and faster delivery.",
       benefits: [
